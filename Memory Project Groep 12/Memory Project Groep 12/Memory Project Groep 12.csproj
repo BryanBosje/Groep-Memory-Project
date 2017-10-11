@@ -45,14 +45,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="game.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="game.Designer.cs">
+      <DependentUpon>game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hoofdmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hoofdmenu.Designer.cs">
+      <DependentUpon>hoofdmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="opties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="opties.Designer.cs">
+      <DependentUpon>opties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="over.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="over.Designer.cs">
+      <DependentUpon>over.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="highscores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="highscores.Designer.cs">
+      <DependentUpon>highscores.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="game.resx">
+      <DependentUpon>game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hoofdmenu.resx">
+      <DependentUpon>hoofdmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="opties.resx">
+      <DependentUpon>opties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="over.resx">
+      <DependentUpon>over.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="highscores.resx">
+      <DependentUpon>highscores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
