@@ -17,7 +17,7 @@ namespace Memory_Project_Groep_12
         public hoofdmenu()
         {
             InitializeComponent();
-            player.URL = ("Background.MP3");
+            player.URL = ("Sound/Background.MP3");
             player.controls.play();
         }
 
@@ -60,7 +60,7 @@ namespace Memory_Project_Groep_12
         }
         static public void Play()
         {
-            string soundfile = "Click.wav";
+            string soundfile = "Sound/Click.wav";
             var sound = new System.Media.SoundPlayer(soundfile);
             sound.Play();
         }

@@ -39,7 +39,7 @@
             // play
             // 
             this.play.Location = new System.Drawing.Point(139, 62);
-            this.play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.play.Margin = new System.Windows.Forms.Padding(2);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(120, 37);
             this.play.TabIndex = 0;
@@ -50,7 +50,7 @@
             // opties
             // 
             this.opties.Location = new System.Drawing.Point(139, 111);
-            this.opties.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.opties.Margin = new System.Windows.Forms.Padding(2);
             this.opties.Name = "opties";
             this.opties.Size = new System.Drawing.Size(120, 37);
             this.opties.TabIndex = 1;
@@ -61,7 +61,7 @@
             // highscores
             // 
             this.highscores.Location = new System.Drawing.Point(139, 163);
-            this.highscores.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.highscores.Margin = new System.Windows.Forms.Padding(2);
             this.highscores.Name = "highscores";
             this.highscores.Size = new System.Drawing.Size(120, 37);
             this.highscores.TabIndex = 2;
@@ -72,7 +72,7 @@
             // over
             // 
             this.over.Location = new System.Drawing.Point(139, 216);
-            this.over.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.over.Margin = new System.Windows.Forms.Padding(2);
             this.over.Name = "over";
             this.over.Size = new System.Drawing.Size(120, 37);
             this.over.TabIndex = 3;
@@ -83,7 +83,7 @@
             // quit
             // 
             this.quit.Location = new System.Drawing.Point(397, 309);
-            this.quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quit.Margin = new System.Windows.Forms.Padding(2);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(56, 38);
             this.quit.TabIndex = 4;
@@ -93,12 +93,13 @@
             // 
             // muteUnmute
             // 
+            this.muteUnmute.Appearance = System.Windows.Forms.Appearance.Button;
             this.muteUnmute.AutoSize = true;
-            this.muteUnmute.Location = new System.Drawing.Point(13, 328);
+            this.muteUnmute.Location = new System.Drawing.Point(12, 324);
             this.muteUnmute.Name = "muteUnmute";
-            this.muteUnmute.Size = new System.Drawing.Size(50, 17);
+            this.muteUnmute.Size = new System.Drawing.Size(71, 23);
             this.muteUnmute.TabIndex = 5;
-            this.muteUnmute.Text = "Mute";
+            this.muteUnmute.Text = "Mute Audio";
             this.muteUnmute.UseVisualStyleBackColor = true;
             this.muteUnmute.CheckedChanged += new System.EventHandler(this.muteUnmute_CheckedChanged);
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.highscores);
             this.Controls.Add(this.opties);
             this.Controls.Add(this.play);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "hoofdmenu";
             this.Text = "Hoofdmenu";
