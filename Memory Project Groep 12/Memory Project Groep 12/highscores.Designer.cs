@@ -34,7 +34,7 @@
             // 
             // terug
             // 
-            this.terug.Location = new System.Drawing.Point(458, 367);
+            this.terug.Location = new System.Drawing.Point(529, 327);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(75, 47);
             this.terug.TabIndex = 8;
@@ -44,7 +44,7 @@
             // 
             // quit
             // 
-            this.quit.Location = new System.Drawing.Point(458, 420);
+            this.quit.Location = new System.Drawing.Point(529, 380);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(75, 47);
             this.quit.TabIndex = 7;
@@ -56,7 +56,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 474);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(616, 439);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
             this.MaximizeBox = false;
