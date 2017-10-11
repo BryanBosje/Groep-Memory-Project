@@ -24,6 +24,7 @@ namespace Memory_Project_Groep_12
 
         private void terug_Click(object sender, EventArgs e)
         {
+            hoofdmenu.Play();
             this.Hide();
             hoofdmenu openen = new hoofdmenu();
             openen.ShowDialog();
@@ -31,6 +32,7 @@ namespace Memory_Project_Groep_12
 
         private void quit_Click(object sender, EventArgs e)
         {
+            hoofdmenu.Play();
             this.Close();
         }
     }

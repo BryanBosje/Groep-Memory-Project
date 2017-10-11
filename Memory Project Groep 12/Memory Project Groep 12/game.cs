@@ -20,16 +20,18 @@ namespace Memory_Project_Groep_12
 
         private void game_Load(object sender, EventArgs e)
         {
-
+            hoofdmenu.Play();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
+            hoofdmenu.Play();
             this.Close();
         }
 
         private void terug_Click(object sender, EventArgs e)
         {
+            hoofdmenu.Play();
             this.Hide();
             hoofdmenu openen = new hoofdmenu();
             openen.ShowDialog();
