@@ -26,7 +26,7 @@ namespace Memory_Project_Groep_12
 
         private void quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
     }
 }
