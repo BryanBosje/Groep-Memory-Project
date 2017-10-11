@@ -53,6 +53,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.CountDown = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.CardsHolder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDup8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -144,6 +145,7 @@
             this.pictureBoxDup8.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup8.TabIndex = 38;
             this.pictureBoxDup8.TabStop = false;
+            this.pictureBoxDup8.Tag = "8";
             this.pictureBoxDup8.Click += new System.EventHandler(this.pictureBoxDup8_Click);
             // 
             // pictureBox8
@@ -153,6 +155,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(155, 145);
             this.pictureBox8.TabIndex = 37;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "8";
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBoxDup7
@@ -162,6 +165,7 @@
             this.pictureBoxDup7.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup7.TabIndex = 36;
             this.pictureBoxDup7.TabStop = false;
+            this.pictureBoxDup7.Tag = "7";
             this.pictureBoxDup7.Click += new System.EventHandler(this.pictureBoxDup7_Click);
             // 
             // pictureBox7
@@ -171,6 +175,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(155, 145);
             this.pictureBox7.TabIndex = 35;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "7";
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBoxDup6
@@ -180,6 +185,7 @@
             this.pictureBoxDup6.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup6.TabIndex = 34;
             this.pictureBoxDup6.TabStop = false;
+            this.pictureBoxDup6.Tag = "6";
             this.pictureBoxDup6.Click += new System.EventHandler(this.pictureBoxDup6_Click);
             // 
             // pictureBox6
@@ -189,6 +195,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(155, 145);
             this.pictureBox6.TabIndex = 33;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "6";
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBoxDup5
@@ -198,6 +205,7 @@
             this.pictureBoxDup5.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup5.TabIndex = 32;
             this.pictureBoxDup5.TabStop = false;
+            this.pictureBoxDup5.Tag = "5";
             this.pictureBoxDup5.Click += new System.EventHandler(this.pictureBoxDup5_Click);
             // 
             // pictureBox5
@@ -207,6 +215,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(155, 145);
             this.pictureBox5.TabIndex = 31;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "5";
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBoxDup4
@@ -216,6 +225,7 @@
             this.pictureBoxDup4.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup4.TabIndex = 30;
             this.pictureBoxDup4.TabStop = false;
+            this.pictureBoxDup4.Tag = "4";
             this.pictureBoxDup4.Click += new System.EventHandler(this.pictureBoxDup4_Click);
             // 
             // pictureBox4
@@ -225,6 +235,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(155, 145);
             this.pictureBox4.TabIndex = 29;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "4";
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBoxDup3
@@ -234,6 +245,7 @@
             this.pictureBoxDup3.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup3.TabIndex = 28;
             this.pictureBoxDup3.TabStop = false;
+            this.pictureBoxDup3.Tag = "3";
             this.pictureBoxDup3.Click += new System.EventHandler(this.pictureBoxDup3_Click);
             // 
             // pictureBox3
@@ -243,6 +255,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(155, 145);
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "3";
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBoxDup2
@@ -252,6 +265,7 @@
             this.pictureBoxDup2.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup2.TabIndex = 26;
             this.pictureBoxDup2.TabStop = false;
+            this.pictureBoxDup2.Tag = "2";
             this.pictureBoxDup2.Click += new System.EventHandler(this.pictureBoxDup2_Click);
             // 
             // pictureBox2
@@ -261,6 +275,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(155, 145);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "2";
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBoxDup1
@@ -270,6 +285,7 @@
             this.pictureBoxDup1.Size = new System.Drawing.Size(155, 145);
             this.pictureBoxDup1.TabIndex = 24;
             this.pictureBoxDup1.TabStop = false;
+            this.pictureBoxDup1.Tag = "1";
             this.pictureBoxDup1.Click += new System.EventHandler(this.pictureBoxDup1_Click);
             // 
             // pictureBox1
@@ -279,6 +295,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(155, 145);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "1";
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // timer1
@@ -302,6 +319,11 @@
             this.CountDown.Text = "3";
             this.CountDown.Click += new System.EventHandler(this.CountDown_Click);
             // 
+            // timer3
+            // 
+            this.timer3.Interval = 300;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +339,7 @@
             this.MaximizeBox = false;
             this.Name = "game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "16";
             this.Text = "Memory";
             this.Load += new System.EventHandler(this.game_Load);
             this.CardsHolder.ResumeLayout(false);
@@ -367,5 +390,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label CountDown;
+        private System.Windows.Forms.Timer timer3;
     }
 }

@@ -18,6 +18,9 @@ namespace Memory_Project_Groep_12
         bool again = false;
         List<int> X = new List<int>(); // X values of the picture boxes
         List<int> Y = new List<int>(); // Y value of the picture boxes
+        PictureBox PendingImage1; // Store first flipped card in this variable
+        PictureBox PendingImage2; // Store Second flipped card into this variable
+
         public game()
         {
             InitializeComponent();
@@ -26,6 +29,10 @@ namespace Memory_Project_Groep_12
 
         private void game_Load(object sender, EventArgs e)
         {
+            foreach(PictureBox picture in CardsHolder.Controls)
+            {
+                picture.Enabled = false;
+            }
             timer1.Start();
             timer2.Start();
             pictureBox1.Image = Properties.Resources.Aardbeien;
@@ -63,6 +70,7 @@ namespace Memory_Project_Groep_12
         {
             foreach (PictureBox picture in CardsHolder.Controls)
             {
+                picture.Enabled = true;
                 picture.Cursor = Cursors.Hand;
                 picture.Image = Properties.Resources.Cover;
             }
@@ -85,26 +93,109 @@ namespace Memory_Project_Groep_12
             }
         }
 
+        //Card Values
+        #region Cards
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = Properties.Resources.Aardbeien;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBox1;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBox1;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+
+                }
+                else
+                {
+                    timer3.Start();
+                }
+                
+            }
         }
 
-        //Card Values
-        #region Cards
         private void pictureBoxDup1_Click(object sender, EventArgs e)
         {
             pictureBoxDup1.Image = Properties.Resources.Aardbeien;
+            pictureBox1.Image = Properties.Resources.Aardbeien;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup1;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup1;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+
+                }
+                else
+                {
+                    timer3.Start();
+                }
+                
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             pictureBox2.Image = Properties.Resources.appeltjes;
+            pictureBox1.Image = Properties.Resources.Aardbeien;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBox2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBox2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+
+                }
+                else
+                {
+                    timer3.Start();
+                }
+                
+            }
         }
 
         private void pictureBoxDup2_Click(object sender, EventArgs e)
         {
             pictureBoxDup2.Image = Properties.Resources.appeltjes;
+            pictureBox1.Image = Properties.Resources.Aardbeien;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+
+                }
+                else
+                {
+                    timer3.Start();
+                }
+                
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -167,5 +258,14 @@ namespace Memory_Project_Groep_12
             pictureBoxDup8.Image = Properties.Resources.peertje;
         }
         #endregion
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            PendingImage1.Image = Properties.Resources.Cover;
+            PendingImage2.Image = Properties.Resources.Cover;
+            PendingImage1 = null;
+            PendingImage2 = null;
+        }
     }
 }
