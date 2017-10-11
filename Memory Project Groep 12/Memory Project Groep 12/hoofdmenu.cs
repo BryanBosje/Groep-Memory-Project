@@ -7,21 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using WMPLib;
+=======
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
 
 namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
+<<<<<<< HEAD
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         public hoofdmenu()
         {
             InitializeComponent();
             player.URL = ("Background.MP3");
+=======
+        public hoofdmenu()
+        {
+            InitializeComponent();
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
         }
 
         private void play_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Play();
             this.Hide();
             game openen = new game();
@@ -36,11 +46,24 @@ namespace Memory_Project_Groep_12
 =======
             System.Windows.Forms.Application.Exit();
 >>>>>>> 88383c0c238fe704559a05e64946daf1223c4718
+=======
+            this.Hide();
+            game openen = new game();
+            openen.ShowDialog();
+         }
+
+        private void quit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
         }
 
         private void opties_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Play();
+=======
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
             this.Hide();
             opties openen = new opties();
             openen.ShowDialog();
@@ -48,7 +71,10 @@ namespace Memory_Project_Groep_12
 
         private void highscores_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Play();
+=======
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
             this.Hide();
             Highscores openen = new Highscores();
             openen.ShowDialog();
@@ -56,11 +82,15 @@ namespace Memory_Project_Groep_12
 
         private void over_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             Play();
+=======
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
             this.Hide();
             over openen = new over();
             openen.ShowDialog();
         }
+<<<<<<< HEAD
 
         private void hoofdmenu_Load(object sender, EventArgs e)
         {
@@ -83,5 +113,7 @@ namespace Memory_Project_Groep_12
             var sound = new System.Media.SoundPlayer(soundfile);
             sound.Play();
         }
+=======
+>>>>>>> 06983b7a02f2ca4a9b65cddddcb7a7574a0ea3f6
     }
 }
