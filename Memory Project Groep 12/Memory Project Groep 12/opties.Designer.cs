@@ -34,9 +34,10 @@
             // 
             // terug
             // 
-            this.terug.Location = new System.Drawing.Point(515, 341);
+            this.terug.Location = new System.Drawing.Point(386, 277);
+            this.terug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.terug.Name = "terug";
-            this.terug.Size = new System.Drawing.Size(75, 47);
+            this.terug.Size = new System.Drawing.Size(56, 38);
             this.terug.TabIndex = 8;
             this.terug.Text = "Terug";
             this.terug.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // quit
             // 
-            this.quit.Location = new System.Drawing.Point(515, 394);
+            this.quit.Location = new System.Drawing.Point(386, 320);
+            this.quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quit.Name = "quit";
-            this.quit.Size = new System.Drawing.Size(75, 47);
+            this.quit.Size = new System.Drawing.Size(56, 38);
             this.quit.TabIndex = 7;
             this.quit.Text = "Game verlaten";
             this.quit.UseVisualStyleBackColor = true;
@@ -54,14 +56,16 @@
             // 
             // opties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 450);
+            this.ClientSize = new System.Drawing.Size(452, 366);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "opties";
             this.Text = "opties";
+            this.Load += new System.EventHandler(this.opties_Load);
             this.ResumeLayout(false);
 
         }
