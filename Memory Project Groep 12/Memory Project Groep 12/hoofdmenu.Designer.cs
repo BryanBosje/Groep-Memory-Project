@@ -97,7 +97,7 @@
             this.Controls.Add(this.play);
             this.MaximizeBox = false;
             this.Name = "hoofdmenu";
-            this.Text = "Hoofdmenu";
+            this.Text = "Memory - menu";
             this.ResumeLayout(false);
 
         }
