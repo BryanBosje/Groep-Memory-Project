@@ -32,7 +32,7 @@
             this.quit = new System.Windows.Forms.Button();
             this.terug = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.ScoreCounter = new System.Windows.Forms.Label();
             this.CardsHolder = new System.Windows.Forms.Panel();
             this.pictureBoxDup8 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -105,15 +105,15 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Score:";
             // 
-            // label2
+            // ScoreCounter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(731, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 23);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "0";
+            this.ScoreCounter.AutoSize = true;
+            this.ScoreCounter.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreCounter.Location = new System.Drawing.Point(731, 9);
+            this.ScoreCounter.Name = "ScoreCounter";
+            this.ScoreCounter.Size = new System.Drawing.Size(21, 23);
+            this.ScoreCounter.TabIndex = 24;
+            this.ScoreCounter.Text = "0";
             // 
             // CardsHolder
             // 
@@ -331,7 +331,7 @@
             this.ClientSize = new System.Drawing.Size(817, 620);
             this.Controls.Add(this.CountDown);
             this.Controls.Add(this.CardsHolder);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.ScoreCounter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
@@ -369,7 +369,7 @@
         private System.Windows.Forms.Button quit;
         private System.Windows.Forms.Button terug;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label ScoreCounter;
         private System.Windows.Forms.Panel CardsHolder;
         private System.Windows.Forms.PictureBox pictureBoxDup8;
         private System.Windows.Forms.PictureBox pictureBox8;
