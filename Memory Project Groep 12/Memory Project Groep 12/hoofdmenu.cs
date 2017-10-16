@@ -53,5 +53,10 @@ namespace Memory_Project_Groep_12
             over.Closed += (s, args) => this.Close();
             over.Show();
         }
+
+        private void hoofdmenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

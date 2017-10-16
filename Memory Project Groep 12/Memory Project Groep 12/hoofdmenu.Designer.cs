@@ -98,6 +98,7 @@
             this.MaximizeBox = false;
             this.Name = "hoofdmenu";
             this.Text = "Memory - menu";
+            this.Load += new System.EventHandler(this.hoofdmenu_Load);
             this.ResumeLayout(false);
 
         }

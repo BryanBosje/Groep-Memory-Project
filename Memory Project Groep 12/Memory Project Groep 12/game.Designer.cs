@@ -50,6 +50,7 @@
             this.quit.TabIndex = 9;
             this.quit.Text = "Game verlaten";
             this.quit.UseVisualStyleBackColor = true;
+            this.quit.Click += new System.EventHandler(this.quit_Click);
             // 
             // game
             // 
