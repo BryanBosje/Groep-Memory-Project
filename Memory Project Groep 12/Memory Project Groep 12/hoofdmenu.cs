@@ -20,9 +20,10 @@ namespace Memory_Project_Groep_12
         private void play_Click(object sender, EventArgs e)
         {
             this.Hide();
-            game openen = new game();
-            openen.ShowDialog();
-         }
+            var game = new game();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
+        }
 
         private void quit_Click(object sender, EventArgs e)
         {
@@ -32,22 +33,25 @@ namespace Memory_Project_Groep_12
         private void opties_Click(object sender, EventArgs e)
         {
             this.Hide();
-            opties openen = new opties();
-            openen.ShowDialog();
+            var opties = new opties();
+            opties.Closed += (s, args) => this.Close();
+            opties.Show();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Highscores openen = new Highscores();
-            openen.ShowDialog();
+            var highscores = new Highscores();
+            highscores.Closed += (s, args) => this.Close();
+            highscores.Show();
         }
 
         private void over_Click(object sender, EventArgs e)
         {
             this.Hide();
-            over openen = new over();
-            openen.ShowDialog();
+            var over = new over();
+            over.Closed += (s, args) => this.Close();
+            over.Show();
         }
     }
 }
