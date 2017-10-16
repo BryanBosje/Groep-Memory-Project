@@ -77,7 +77,7 @@
     <Compile Include="highscores.Designer.cs">
       <DependentUpon>highscores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="game.resx">
+    <EmbeddedResource Include="Game.resx">
       <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hoofdmenu.resx">
