@@ -25,9 +25,9 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-            var game = new game();
-            game.Closed += (s, args) => this.Close();
-            game.Show();
+            var hoofdmenu = new game();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
@@ -40,27 +40,27 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-            var opties = new opties();
-            opties.Closed += (s, args) => this.Close();
-            opties.Show();
+            var hoofdmenu = new opties();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
             Play();
             this.Hide();
-            var highscores = new Highscores();
-            highscores.Closed += (s, args) => this.Close();
-            highscores.Show();
+            var hoofdmenu = new Highscores();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void over_Click(object sender, EventArgs e)
         {
             Play();
             this.Hide();
-            var over = new over();
-            over.Closed += (s, args) => this.Close();
-            over.Show();
+            var hoofdmenu = new over();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void hoofdmenu_Load(object sender, EventArgs e)

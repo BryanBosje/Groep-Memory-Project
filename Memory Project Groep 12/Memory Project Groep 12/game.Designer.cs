@@ -60,7 +60,7 @@
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
             this.Name = "game";
-            this.Text = "Form2";
+            this.Text = "Memory - game";
             this.ResumeLayout(false);
 
         }
