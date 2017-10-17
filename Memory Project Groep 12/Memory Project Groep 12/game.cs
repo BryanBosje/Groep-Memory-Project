@@ -13,7 +13,6 @@ namespace Memory_Project_Groep_12
     public partial class game : Form
     {
         //variables
-        int score = 0; // scores
         Random location = new Random(); // selects a random value from list X and Y and assigns a new location to each card
         bool again = false;
         List<int> X = new List<int>(); // X values of the picture boxes
@@ -110,7 +109,8 @@ namespace Memory_Project_Groep_12
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
                 }
                 else
                 {
@@ -122,8 +122,7 @@ namespace Memory_Project_Groep_12
 
         private void pictureBoxDup1_Click(object sender, EventArgs e)
         {
-            pictureBoxDup1.Image = Properties.Resources.Aardbeien;
-            pictureBox1.Image = Properties.Resources.Aardbeien;
+            pictureBoxDup1.Image = Properties.Resources.Aardbeien;            
             if (PendingImage1 == null)
             {
                 PendingImage1 = pictureBoxDup1;
@@ -136,7 +135,8 @@ namespace Memory_Project_Groep_12
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
                 }
                 else
                 {
@@ -148,8 +148,7 @@ namespace Memory_Project_Groep_12
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            pictureBox2.Image = Properties.Resources.appeltjes;
-            pictureBox1.Image = Properties.Resources.Aardbeien;
+            pictureBox2.Image = Properties.Resources.appeltjes;            
             if (PendingImage1 == null)
             {
                 PendingImage1 = pictureBox2;
@@ -162,7 +161,8 @@ namespace Memory_Project_Groep_12
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
                 }
                 else
                 {
@@ -174,8 +174,7 @@ namespace Memory_Project_Groep_12
 
         private void pictureBoxDup2_Click(object sender, EventArgs e)
         {
-            pictureBoxDup2.Image = Properties.Resources.appeltjes;
-            pictureBox1.Image = Properties.Resources.Aardbeien;
+            pictureBoxDup2.Image = Properties.Resources.appeltjes;            
             if (PendingImage1 == null)
             {
                 PendingImage1 = pictureBoxDup2;
@@ -188,7 +187,8 @@ namespace Memory_Project_Groep_12
             {
                 if (PendingImage1.Tag == PendingImage2.Tag)
                 {
-
+                    PendingImage1 = null;
+                    PendingImage2 = null;
                 }
                 else
                 {
@@ -201,61 +201,313 @@ namespace Memory_Project_Groep_12
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             pictureBox3.Image = Properties.Resources.banaantje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup3_Click(object sender, EventArgs e)
         {
             pictureBoxDup3.Image = Properties.Resources.banaantje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             pictureBox4.Image = Properties.Resources.Druifjes;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup4_Click(object sender, EventArgs e)
         {
             pictureBoxDup4.Image = Properties.Resources.Druifjes;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             pictureBox5.Image = Properties.Resources.kersies;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup5_Click(object sender, EventArgs e)
         {
             pictureBoxDup5.Image = Properties.Resources.kersies;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             pictureBox6.Image = Properties.Resources.kiwie;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup6_Click(object sender, EventArgs e)
         {
             pictureBoxDup6.Image = Properties.Resources.kiwie;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
             pictureBox7.Image = Properties.Resources.mandarijntje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup7_Click(object sender, EventArgs e)
         {
             pictureBoxDup7.Image = Properties.Resources.mandarijntje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             pictureBox8.Image = Properties.Resources.peertje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
 
         private void pictureBoxDup8_Click(object sender, EventArgs e)
         {
             pictureBoxDup8.Image = Properties.Resources.peertje;
+            if (PendingImage1 == null)
+            {
+                PendingImage1 = pictureBoxDup2;
+            }
+            else if (PendingImage1 != null && PendingImage2 == null)
+            {
+                PendingImage2 = pictureBoxDup2;
+            }
+            if (PendingImage1 != null && PendingImage2 != null)
+            {
+                if (PendingImage1.Tag == PendingImage2.Tag)
+                {
+                    PendingImage1 = null;
+                    PendingImage2 = null;
+                }
+                else
+                {
+                    timer3.Start();
+                }
+
+            }
         }
         #endregion
 

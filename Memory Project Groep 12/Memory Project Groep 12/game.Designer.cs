@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.quit = new System.Windows.Forms.Button();
             this.terug = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.scoreCounter = new System.Windows.Forms.Label();
             this.CardsHolder = new System.Windows.Forms.Panel();
             this.pictureBoxDup8 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -95,25 +95,25 @@
             this.terug.UseVisualStyleBackColor = true;
             this.terug.Click += new System.EventHandler(this.terug_Click);
             // 
-            // label1
+            // scoreLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(659, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Score:";
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(659, 9);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(75, 23);
+            this.scoreLabel.TabIndex = 23;
+            this.scoreLabel.Text = "Score:";
             // 
-            // label2
+            // scoreCounter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(731, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 23);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "0";
+            this.scoreCounter.AutoSize = true;
+            this.scoreCounter.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreCounter.Location = new System.Drawing.Point(731, 9);
+            this.scoreCounter.Name = "scoreCounter";
+            this.scoreCounter.Size = new System.Drawing.Size(21, 23);
+            this.scoreCounter.TabIndex = 24;
+            this.scoreCounter.Text = "0";
             // 
             // CardsHolder
             // 
@@ -331,8 +331,8 @@
             this.ClientSize = new System.Drawing.Size(817, 620);
             this.Controls.Add(this.CountDown);
             this.Controls.Add(this.CardsHolder);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.scoreCounter);
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -368,8 +368,8 @@
 
         private System.Windows.Forms.Button quit;
         private System.Windows.Forms.Button terug;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label scoreCounter;
         private System.Windows.Forms.Panel CardsHolder;
         private System.Windows.Forms.PictureBox pictureBoxDup8;
         private System.Windows.Forms.PictureBox pictureBox8;
