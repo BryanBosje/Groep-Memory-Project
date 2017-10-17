@@ -29,5 +29,10 @@ namespace Memory_Project_Groep_12
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void opnieuw_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

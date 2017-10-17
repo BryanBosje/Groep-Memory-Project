@@ -30,6 +30,7 @@
         {
             this.terug = new System.Windows.Forms.Button();
             this.quit = new System.Windows.Forms.Button();
+            this.opnieuw = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // terug
@@ -52,11 +53,22 @@
             this.quit.UseVisualStyleBackColor = true;
             this.quit.Click += new System.EventHandler(this.quit_Click);
             // 
+            // opnieuw
+            // 
+            this.opnieuw.Location = new System.Drawing.Point(529, 274);
+            this.opnieuw.Name = "opnieuw";
+            this.opnieuw.Size = new System.Drawing.Size(75, 47);
+            this.opnieuw.TabIndex = 11;
+            this.opnieuw.Text = "Opnieuw";
+            this.opnieuw.UseVisualStyleBackColor = true;
+            this.opnieuw.Click += new System.EventHandler(this.opnieuw_Click);
+            // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 439);
+            this.Controls.Add(this.opnieuw);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
             this.Name = "game";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button terug;
         private System.Windows.Forms.Button quit;
+        private System.Windows.Forms.Button opnieuw;
     }
 }
