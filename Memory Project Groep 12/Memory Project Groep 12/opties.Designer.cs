@@ -34,7 +34,7 @@
             this.Fries = new System.Windows.Forms.Button();
             this.NL = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.snoep = new System.Windows.Forms.Button();
+            this.starwars = new System.Windows.Forms.Button();
             this.FRUIT = new System.Windows.Forms.Button();
             this.Standaard = new System.Windows.Forms.Button();
             this.minecraft = new System.Windows.Forms.Button();
@@ -100,15 +100,15 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Taal";
             // 
-            // snoep
+            // starwars
             // 
-            this.snoep.Location = new System.Drawing.Point(121, 43);
-            this.snoep.Name = "snoep";
-            this.snoep.Size = new System.Drawing.Size(90, 57);
-            this.snoep.TabIndex = 26;
-            this.snoep.Text = "STAR WARS";
-            this.snoep.UseVisualStyleBackColor = true;
-            this.snoep.Click += new System.EventHandler(this.snoep_Click);
+            this.starwars.Location = new System.Drawing.Point(121, 43);
+            this.starwars.Name = "starwars";
+            this.starwars.Size = new System.Drawing.Size(90, 57);
+            this.starwars.TabIndex = 26;
+            this.starwars.Text = "STAR WARS";
+            this.starwars.UseVisualStyleBackColor = true;
+            this.starwars.Click += new System.EventHandler(this.starwars_Click);
             // 
             // FRUIT
             // 
@@ -179,7 +179,7 @@
             this.Controls.Add(this.Fries);
             this.Controls.Add(this.NL);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.snoep);
+            this.Controls.Add(this.starwars);
             this.Controls.Add(this.FRUIT);
             this.Controls.Add(this.Standaard);
             this.Controls.Add(this.minecraft);
@@ -205,7 +205,7 @@
         private System.Windows.Forms.Button Fries;
         private System.Windows.Forms.Button NL;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button snoep;
+        private System.Windows.Forms.Button starwars;
         private System.Windows.Forms.Button FRUIT;
         private System.Windows.Forms.Button Standaard;
         private System.Windows.Forms.Button minecraft;

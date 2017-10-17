@@ -40,11 +40,6 @@ namespace Memory_Project_Groep_12
             BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        private void snoep_Click(object sender, EventArgs e)
-        {
-            this.BackgroundImage = Properties.Resources.starwars;
-        }
-
         private void minecraft_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.minecraft;
@@ -63,6 +58,11 @@ namespace Memory_Project_Groep_12
         private void frozen_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.frozen;
+        }
+
+        private void starwars_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = Properties.Resources.starwars;
         }
     }
 }
