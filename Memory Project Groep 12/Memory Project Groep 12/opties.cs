@@ -19,20 +19,15 @@ namespace Memory_Project_Groep_12
 
         private void terug_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
             this.Hide();
-            hoofdmenu openen = new hoofdmenu();
-            openen.ShowDialog();
+            var opties = new hoofdmenu();
+            opties.Closed += (s, args) => this.Close();
+            opties.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
-        }
-
-        private void opties_Load(object sender, EventArgs e)
-        {
-            hoofdmenu.Play();
         }
     }
 }

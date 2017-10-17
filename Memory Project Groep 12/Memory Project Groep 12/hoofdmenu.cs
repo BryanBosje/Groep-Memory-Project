@@ -17,21 +17,22 @@ namespace Memory_Project_Groep_12
         public hoofdmenu()
         {
             InitializeComponent();
-            player.URL = ("Background.MP3");
+            player.URL = ("Sound/Background.MP3");
+            player.controls.play();
         }
 
         private void play_Click(object sender, EventArgs e)
         {
             Play();
             this.Hide();
-            game openen = new game();
-            openen.ShowDialog();
+            var hoofdmenu = new game();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
             Play();
-            this.Close();
             System.Windows.Forms.Application.Exit();
         }
 
@@ -39,46 +40,46 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-            opties openen = new opties();
-            openen.ShowDialog();
+            var hoofdmenu = new opties();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
             Play();
             this.Hide();
-            Highscores openen = new Highscores();
-            openen.ShowDialog();
+            var hoofdmenu = new Highscores();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void over_Click(object sender, EventArgs e)
         {
             Play();
             this.Hide();
-            over openen = new over();
-            openen.ShowDialog();
+            var hoofdmenu = new over();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void hoofdmenu_Load(object sender, EventArgs e)
         {
-            player.controls.play();
-        }
 
+        }
+        static public void Play()
+        {
+            string soundfile = "Sound/Click.wav";
+            var sound = new System.Media.SoundPlayer(soundfile);
+            sound.Play();
+        }
         private void muteUnmute_CheckedChanged(object sender, EventArgs e)
         {
-            Play();
             System.Windows.Forms.CheckBox muteUnmute = (System.Windows.Forms.CheckBox)sender;
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
             player.settings.mute = muteUnmute.Checked;
-        }
-
-        static public void Play()
-        {
-            string soundfile = "Click.wav";
-            var sound = new System.Media.SoundPlayer(soundfile);
-            sound.Play();
         }
     }
 }

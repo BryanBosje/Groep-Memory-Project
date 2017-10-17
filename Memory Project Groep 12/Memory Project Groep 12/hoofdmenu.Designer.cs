@@ -96,9 +96,9 @@
             this.muteUnmute.AutoSize = true;
             this.muteUnmute.Location = new System.Drawing.Point(13, 328);
             this.muteUnmute.Name = "muteUnmute";
-            this.muteUnmute.Size = new System.Drawing.Size(50, 17);
+            this.muteUnmute.Size = new System.Drawing.Size(80, 17);
             this.muteUnmute.TabIndex = 5;
-            this.muteUnmute.Text = "Mute";
+            this.muteUnmute.Text = "Mute Audio";
             this.muteUnmute.UseVisualStyleBackColor = true;
             this.muteUnmute.CheckedChanged += new System.EventHandler(this.muteUnmute_CheckedChanged);
             // 
@@ -116,7 +116,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "hoofdmenu";
-            this.Text = "Hoofdmenu";
+            this.Text = "Memory - menu";
             this.Load += new System.EventHandler(this.hoofdmenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

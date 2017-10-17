@@ -24,16 +24,14 @@ namespace Memory_Project_Groep_12
 
         private void terug_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
             this.Hide();
-            hoofdmenu openen = new hoofdmenu();
-            openen.ShowDialog();
+            var over = new hoofdmenu();
+            over.Closed += (s, args) => this.Close();
+            over.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
-            this.Close();
             System.Windows.Forms.Application.Exit();
         }
     }

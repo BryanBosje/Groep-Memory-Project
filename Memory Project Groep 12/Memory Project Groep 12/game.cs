@@ -17,25 +17,22 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
         }
 
-
-        private void game_Load(object sender, EventArgs e)
+        private void terug_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
+            this.Hide();
+            var game = new hoofdmenu();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
-            this.Close();
             System.Windows.Forms.Application.Exit();
         }
 
-        private void terug_Click(object sender, EventArgs e)
+        private void opnieuw_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
-            this.Hide();
-            hoofdmenu openen = new hoofdmenu();
-            openen.ShowDialog();
+            Application.Restart();
         }
     }
 }

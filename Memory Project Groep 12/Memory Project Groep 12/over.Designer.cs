@@ -35,7 +35,7 @@
             // 
             // terug
             // 
-            this.terug.Location = new System.Drawing.Point(507, 356);
+            this.terug.Location = new System.Drawing.Point(529, 327);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(75, 47);
             this.terug.TabIndex = 8;
@@ -45,7 +45,7 @@
             // 
             // quit
             // 
-            this.quit.Location = new System.Drawing.Point(507, 409);
+            this.quit.Location = new System.Drawing.Point(529, 380);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(75, 47);
             this.quit.TabIndex = 7;
@@ -59,7 +59,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(61, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(473, 52);
+            this.label1.Size = new System.Drawing.Size(464, 51);
             this.label1.TabIndex = 9;
             this.label1.Text = "Hier komt domme tekst";
             // 
@@ -67,13 +67,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 464);
+            this.ClientSize = new System.Drawing.Size(616, 439);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
             this.MaximizeBox = false;
             this.Name = "over";
-            this.Text = "over";
+            this.Text = "Memory - over";
             this.Load += new System.EventHandler(this.over_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -77,7 +77,7 @@
     <Compile Include="highscores.Designer.cs">
       <DependentUpon>highscores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="game.resx">
+    <EmbeddedResource Include="Game.resx">
       <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hoofdmenu.resx">
@@ -97,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="highscores.resx">
       <DependentUpon>highscores.cs</DependentUpon>
@@ -113,6 +114,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aardbeien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appeltjes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banaantje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Druifjes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kersies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiwie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mandarijntje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peertje.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
