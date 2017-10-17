@@ -65,7 +65,7 @@
             // 
             // engels
             // 
-            this.engels.Location = new System.Drawing.Point(204, 169);
+            this.engels.Location = new System.Drawing.Point(204, 143);
             this.engels.Name = "engels";
             this.engels.Size = new System.Drawing.Size(90, 41);
             this.engels.TabIndex = 30;
@@ -74,7 +74,7 @@
             // 
             // Fries
             // 
-            this.Fries.Location = new System.Drawing.Point(108, 169);
+            this.Fries.Location = new System.Drawing.Point(108, 143);
             this.Fries.Name = "Fries";
             this.Fries.Size = new System.Drawing.Size(90, 41);
             this.Fries.TabIndex = 29;
@@ -83,7 +83,7 @@
             // 
             // NL
             // 
-            this.NL.Location = new System.Drawing.Point(12, 169);
+            this.NL.Location = new System.Drawing.Point(12, 143);
             this.NL.Name = "NL";
             this.NL.Size = new System.Drawing.Size(90, 41);
             this.NL.TabIndex = 28;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 140);
+            this.label2.Location = new System.Drawing.Point(8, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 20);
             this.label2.TabIndex = 27;
@@ -102,57 +102,63 @@
             // 
             // snoep
             // 
-            this.snoep.Location = new System.Drawing.Point(108, 43);
+            this.snoep.Location = new System.Drawing.Point(121, 43);
             this.snoep.Name = "snoep";
-            this.snoep.Size = new System.Drawing.Size(90, 80);
+            this.snoep.Size = new System.Drawing.Size(90, 57);
             this.snoep.TabIndex = 26;
-            this.snoep.Text = "SNOEP";
+            this.snoep.Text = "STAR WARS";
             this.snoep.UseVisualStyleBackColor = true;
+            this.snoep.Click += new System.EventHandler(this.snoep_Click);
             // 
             // FRUIT
             // 
-            this.FRUIT.Location = new System.Drawing.Point(396, 43);
+            this.FRUIT.Location = new System.Drawing.Point(426, 43);
             this.FRUIT.Name = "FRUIT";
-            this.FRUIT.Size = new System.Drawing.Size(90, 80);
+            this.FRUIT.Size = new System.Drawing.Size(90, 57);
             this.FRUIT.TabIndex = 25;
             this.FRUIT.Text = "FRUIT";
             this.FRUIT.UseVisualStyleBackColor = true;
+            this.FRUIT.Click += new System.EventHandler(this.FRUIT_Click);
             // 
             // Standaard
             // 
             this.Standaard.Location = new System.Drawing.Point(12, 43);
             this.Standaard.Name = "Standaard";
-            this.Standaard.Size = new System.Drawing.Size(90, 80);
+            this.Standaard.Size = new System.Drawing.Size(103, 57);
             this.Standaard.TabIndex = 24;
             this.Standaard.Text = "STANDAARD";
             this.Standaard.UseVisualStyleBackColor = true;
+            this.Standaard.Click += new System.EventHandler(this.Standaard_Click);
             // 
             // minecraft
             // 
-            this.minecraft.Location = new System.Drawing.Point(204, 43);
+            this.minecraft.Location = new System.Drawing.Point(217, 43);
             this.minecraft.Name = "minecraft";
-            this.minecraft.Size = new System.Drawing.Size(90, 80);
+            this.minecraft.Size = new System.Drawing.Size(107, 57);
             this.minecraft.TabIndex = 23;
             this.minecraft.Text = "MINECRAFT";
             this.minecraft.UseVisualStyleBackColor = true;
+            this.minecraft.Click += new System.EventHandler(this.minecraft_Click);
             // 
             // frozen
             // 
-            this.frozen.Location = new System.Drawing.Point(492, 43);
+            this.frozen.Location = new System.Drawing.Point(522, 43);
             this.frozen.Name = "frozen";
-            this.frozen.Size = new System.Drawing.Size(90, 80);
+            this.frozen.Size = new System.Drawing.Size(90, 57);
             this.frozen.TabIndex = 22;
             this.frozen.Text = "FROZEN";
             this.frozen.UseVisualStyleBackColor = true;
+            this.frozen.Click += new System.EventHandler(this.frozen_Click);
             // 
             // lego
             // 
-            this.lego.Location = new System.Drawing.Point(300, 43);
+            this.lego.Location = new System.Drawing.Point(330, 43);
             this.lego.Name = "lego";
-            this.lego.Size = new System.Drawing.Size(90, 80);
+            this.lego.Size = new System.Drawing.Size(90, 57);
             this.lego.TabIndex = 21;
             this.lego.Text = "LEGO";
             this.lego.UseVisualStyleBackColor = true;
+            this.lego.Click += new System.EventHandler(this.lego_Click);
             // 
             // label1
             // 
@@ -185,6 +191,7 @@
             this.MaximizeBox = false;
             this.Name = "opties";
             this.Text = "Memory - opties";
+            this.Load += new System.EventHandler(this.opties_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

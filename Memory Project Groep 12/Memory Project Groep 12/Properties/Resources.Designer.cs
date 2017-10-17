@@ -63,9 +63,9 @@ namespace Memory_Project_Groep_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Aardbeien {
+        internal static System.Drawing.Bitmap frozen {
             get {
-                object obj = ResourceManager.GetObject("Aardbeien", resourceCulture);
+                object obj = ResourceManager.GetObject("frozen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Memory_Project_Groep_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap appeltjes {
+        internal static System.Drawing.Bitmap fruit {
             get {
-                object obj = ResourceManager.GetObject("appeltjes", resourceCulture);
+                object obj = ResourceManager.GetObject("fruit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Memory_Project_Groep_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap banaantje {
+        internal static System.Drawing.Bitmap lego {
             get {
-                object obj = ResourceManager.GetObject("banaantje", resourceCulture);
+                object obj = ResourceManager.GetObject("lego", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Memory_Project_Groep_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cover {
+        internal static System.Drawing.Bitmap minecraft {
             get {
-                object obj = ResourceManager.GetObject("Cover", resourceCulture);
+                object obj = ResourceManager.GetObject("minecraft", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,49 +103,9 @@ namespace Memory_Project_Groep_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Druifjes {
+        internal static System.Drawing.Bitmap starwars {
             get {
-                object obj = ResourceManager.GetObject("Druifjes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kersies {
-            get {
-                object obj = ResourceManager.GetObject("kersies", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kiwie {
-            get {
-                object obj = ResourceManager.GetObject("kiwie", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap mandarijntje {
-            get {
-                object obj = ResourceManager.GetObject("mandarijntje", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap peertje {
-            get {
-                object obj = ResourceManager.GetObject("peertje", resourceCulture);
+                object obj = ResourceManager.GetObject("starwars", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
