@@ -42,7 +42,7 @@
             // 
             // play
             // 
-            this.play.Location = new System.Drawing.Point(209, 27);
+            this.play.Location = new System.Drawing.Point(226, 20);
             this.play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(160, 46);
@@ -53,7 +53,7 @@
             // 
             // highscores
             // 
-            this.highscores.Location = new System.Drawing.Point(209, 88);
+            this.highscores.Location = new System.Drawing.Point(226, 81);
             this.highscores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.highscores.Name = "highscores";
             this.highscores.Size = new System.Drawing.Size(160, 46);
@@ -64,7 +64,7 @@
             // 
             // over
             // 
-            this.over.Location = new System.Drawing.Point(209, 153);
+            this.over.Location = new System.Drawing.Point(226, 146);
             this.over.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.over.Name = "over";
             this.over.Size = new System.Drawing.Size(160, 46);
@@ -98,9 +98,9 @@
             // 
             // starwars
             // 
-            this.starwars.Location = new System.Drawing.Point(84, 260);
+            this.starwars.Location = new System.Drawing.Point(225, 259);
             this.starwars.Name = "starwars";
-            this.starwars.Size = new System.Drawing.Size(90, 57);
+            this.starwars.Size = new System.Drawing.Size(90, 46);
             this.starwars.TabIndex = 30;
             this.starwars.Text = "STAR WARS";
             this.starwars.UseVisualStyleBackColor = true;
@@ -108,19 +108,19 @@
             // 
             // auto
             // 
-            this.auto.Location = new System.Drawing.Point(428, 260);
+            this.auto.Location = new System.Drawing.Point(417, 259);
             this.auto.Name = "auto";
-            this.auto.Size = new System.Drawing.Size(90, 57);
+            this.auto.Size = new System.Drawing.Size(90, 46);
             this.auto.TabIndex = 29;
-            this.auto.Text = "AUTO";
+            this.auto.Text = "AUTO\'S";
             this.auto.UseVisualStyleBackColor = true;
             this.auto.Click += new System.EventHandler(this.auto_Click);
             // 
             // Standaard
             // 
-            this.Standaard.Location = new System.Drawing.Point(196, 260);
+            this.Standaard.Location = new System.Drawing.Point(116, 259);
             this.Standaard.Name = "Standaard";
-            this.Standaard.Size = new System.Drawing.Size(103, 57);
+            this.Standaard.Size = new System.Drawing.Size(103, 46);
             this.Standaard.TabIndex = 28;
             this.Standaard.Text = "STANDAARD";
             this.Standaard.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             // frozen
             // 
-            this.frozen.Location = new System.Drawing.Point(316, 260);
+            this.frozen.Location = new System.Drawing.Point(321, 259);
             this.frozen.Name = "frozen";
-            this.frozen.Size = new System.Drawing.Size(90, 57);
+            this.frozen.Size = new System.Drawing.Size(90, 46);
             this.frozen.TabIndex = 27;
             this.frozen.Text = "FROZEN";
             this.frozen.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 224);
+            this.label1.Location = new System.Drawing.Point(113, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 31;
