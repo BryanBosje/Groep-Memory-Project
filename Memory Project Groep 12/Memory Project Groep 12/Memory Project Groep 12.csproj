@@ -57,12 +57,6 @@
     <Compile Include="hoofdmenu.Designer.cs">
       <DependentUpon>hoofdmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="opties.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="opties.Designer.cs">
-      <DependentUpon>opties.cs</DependentUpon>
-    </Compile>
     <Compile Include="over.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,14 +71,11 @@
     <Compile Include="highscores.Designer.cs">
       <DependentUpon>highscores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="game.resx">
+    <EmbeddedResource Include="Game.resx">
       <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hoofdmenu.resx">
       <DependentUpon>hoofdmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="opties.resx">
-      <DependentUpon>opties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="over.resx">
       <DependentUpon>over.cs</DependentUpon>
@@ -97,6 +88,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="highscores.resx">
       <DependentUpon>highscores.cs</DependentUpon>
@@ -132,6 +124,15 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frozen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starwars.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auto.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

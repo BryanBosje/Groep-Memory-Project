@@ -17,24 +17,33 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
         }
 
-
-        private void game_Load(object sender, EventArgs e)
+        private void terug_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var game = new hoofdmenu();
+            game.Closed += (s, args) => this.Close();
+            game.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
             System.Windows.Forms.Application.Exit();
         }
 
-        private void terug_Click(object sender, EventArgs e)
+        private void opnieuw_Click(object sender, EventArgs e)
         {
-            hoofdmenu.Play();
-            this.Hide();
-            hoofdmenu openen = new hoofdmenu();
-            openen.ShowDialog();
+            Application.Restart();
+        }
+
+        private void game_Load(object sender, EventArgs e)
+        {
+            BackgroundImageLayout = ImageLayout.Stretch;
+            switch (hoofdmenu.Achtergrond)
+            {
+                case "frozen": this.BackgroundImage = Properties.Resources.frozen; break;
+                case "auto": this.BackgroundImage = Properties.Resources.auto; break;
+                case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
+            }
         }
     }
 }

@@ -28,40 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.quit = new System.Windows.Forms.Button();
             this.terug = new System.Windows.Forms.Button();
+            this.quit = new System.Windows.Forms.Button();
+            this.opnieuw = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // terug
+            // 
+            this.terug.Location = new System.Drawing.Point(529, 327);
+            this.terug.Name = "terug";
+            this.terug.Size = new System.Drawing.Size(75, 47);
+            this.terug.TabIndex = 10;
+            this.terug.Text = "Terug";
+            this.terug.UseVisualStyleBackColor = true;
+            this.terug.Click += new System.EventHandler(this.terug_Click);
             // 
             // quit
             // 
-            this.quit.Location = new System.Drawing.Point(778, 519);
+            this.quit.Location = new System.Drawing.Point(529, 380);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(75, 47);
-            this.quit.TabIndex = 5;
+            this.quit.TabIndex = 9;
             this.quit.Text = "Game verlaten";
             this.quit.UseVisualStyleBackColor = true;
             this.quit.Click += new System.EventHandler(this.quit_Click);
             // 
-            // terug
+            // opnieuw
             // 
-            this.terug.Location = new System.Drawing.Point(778, 466);
-            this.terug.Name = "terug";
-            this.terug.Size = new System.Drawing.Size(75, 47);
-            this.terug.TabIndex = 6;
-            this.terug.Text = "Terug";
-            this.terug.UseVisualStyleBackColor = true;
-            this.terug.Click += new System.EventHandler(this.terug_Click);
+            this.opnieuw.Location = new System.Drawing.Point(529, 274);
+            this.opnieuw.Name = "opnieuw";
+            this.opnieuw.Size = new System.Drawing.Size(75, 47);
+            this.opnieuw.TabIndex = 11;
+            this.opnieuw.Text = "Opnieuw";
+            this.opnieuw.UseVisualStyleBackColor = true;
+            this.opnieuw.Click += new System.EventHandler(this.opnieuw_Click);
             // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 578);
+            this.ClientSize = new System.Drawing.Size(616, 439);
+            this.Controls.Add(this.opnieuw);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
-            this.MaximizeBox = false;
             this.Name = "game";
-            this.Text = "Form1";
+            this.Text = "Memory - game";
             this.Load += new System.EventHandler(this.game_Load);
             this.ResumeLayout(false);
 
@@ -69,7 +80,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button quit;
         private System.Windows.Forms.Button terug;
+        private System.Windows.Forms.Button quit;
+        private System.Windows.Forms.Button opnieuw;
     }
 }
