@@ -34,5 +34,16 @@ namespace Memory_Project_Groep_12
         {
             Application.Restart();
         }
+
+        private void game_Load(object sender, EventArgs e)
+        {
+            BackgroundImageLayout = ImageLayout.Stretch;
+            switch (hoofdmenu.Achtergrond)
+            {
+                case "frozen": this.BackgroundImage = Properties.Resources.frozen; break;
+                case "auto": this.BackgroundImage = Properties.Resources.auto; break;
+                case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
+            }
+        }
     }
 }

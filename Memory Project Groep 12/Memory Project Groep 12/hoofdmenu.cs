@@ -36,15 +36,6 @@ namespace Memory_Project_Groep_12
             System.Windows.Forms.Application.Exit();
         }
 
-        private void opties_Click(object sender, EventArgs e)
-        {
-            Play();
-            this.Hide();
-            var hoofdmenu = new opties();
-            hoofdmenu.Closed += (s, args) => this.Close();
-            hoofdmenu.Show();
-        }
-
         private void highscores_Click(object sender, EventArgs e)
         {
             Play();
@@ -65,7 +56,13 @@ namespace Memory_Project_Groep_12
 
         private void hoofdmenu_Load(object sender, EventArgs e)
         {
-
+            BackgroundImageLayout = ImageLayout.Stretch;
+            switch (hoofdmenu.Achtergrond)
+            {
+                case "frozen": this.BackgroundImage = Properties.Resources.frozen; break;
+                case "auto": this.BackgroundImage = Properties.Resources.auto; break;
+                case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
+            }
         }
         static public void Play()
         {
@@ -80,6 +77,31 @@ namespace Memory_Project_Groep_12
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
             player.settings.mute = muteUnmute.Checked;
+        }
+
+        public static string Achtergrond = "";
+
+        private void starwars_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "starwars";
+            this.BackgroundImage = Properties.Resources.starwars;
+        }
+
+        private void Standaard_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+        }
+
+        private void frozen_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "frozen";
+            this.BackgroundImage = Properties.Resources.frozen;
+        }
+
+        private void auto_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "auto";
+            this.BackgroundImage = Properties.Resources.auto;
         }
     }
 }

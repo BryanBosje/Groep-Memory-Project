@@ -73,6 +73,7 @@
             this.Controls.Add(this.quit);
             this.Name = "game";
             this.Text = "Memory - game";
+            this.Load += new System.EventHandler(this.game_Load);
             this.ResumeLayout(false);
 
         }
