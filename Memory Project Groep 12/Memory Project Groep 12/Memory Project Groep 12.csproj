@@ -134,5 +134,8 @@
   <ItemGroup>
     <None Include="Resources\auto.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Background.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
