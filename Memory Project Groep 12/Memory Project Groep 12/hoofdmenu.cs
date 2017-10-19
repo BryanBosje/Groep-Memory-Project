@@ -7,47 +7,101 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         public hoofdmenu()
         {
             InitializeComponent();
+            player.URL = ("Sound/Background.MP3");
+            player.controls.play();
         }
 
         private void play_Click(object sender, EventArgs e)
         {
+            Play();
             this.Hide();
-            game openen = new game();
-            openen.ShowDialog();
-         }
+            var hoofdmenu = new game();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
+        }
 
         private void quit_Click(object sender, EventArgs e)
         {
+            Play();
             System.Windows.Forms.Application.Exit();
-        }
-
-        private void opties_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            opties openen = new opties();
-            openen.ShowDialog();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
+            Play();
             this.Hide();
-            Highscores openen = new Highscores();
-            openen.ShowDialog();
+            var hoofdmenu = new Highscores();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
         }
 
         private void over_Click(object sender, EventArgs e)
         {
+            Play();
             this.Hide();
-            over openen = new over();
-            openen.ShowDialog();
+            var hoofdmenu = new over();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            hoofdmenu.Show();
+        }
+
+        private void hoofdmenu_Load(object sender, EventArgs e)
+        {
+            BackgroundImageLayout = ImageLayout.Stretch;
+            switch (hoofdmenu.Achtergrond)
+            {
+                case "frozen": this.BackgroundImage = Properties.Resources.frozen; break;
+                case "auto": this.BackgroundImage = Properties.Resources.auto; break;
+                case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
+            }
+        }
+        static public void Play()
+        {
+            string soundfile = "Sound/Click.wav";
+            var sound = new System.Media.SoundPlayer(soundfile);
+           // sound.Play();
+        }
+        private void muteUnmute_CheckedChanged(object sender, EventArgs e)
+        {
+            System.Windows.Forms.CheckBox muteUnmute = (System.Windows.Forms.CheckBox)sender;
+
+            muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
+
+            player.settings.mute = muteUnmute.Checked;
+        }
+
+        public static string Achtergrond = "";
+
+        private void starwars_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "starwars";
+            this.BackgroundImage = Properties.Resources.starwars;
+        }
+
+        private void Standaard_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+        }
+
+        private void frozen_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "frozen";
+            this.BackgroundImage = Properties.Resources.frozen;
+        }
+
+        private void auto_Click(object sender, EventArgs e)
+        {
+            Achtergrond = "auto";
+            this.BackgroundImage = Properties.Resources.auto;
         }
     }
 }
