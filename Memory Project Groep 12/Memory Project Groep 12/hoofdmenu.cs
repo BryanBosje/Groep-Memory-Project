@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Media;
+using System.IO;
 
 namespace Memory_Project_Groep_12
 {
@@ -19,7 +21,7 @@ namespace Memory_Project_Groep_12
             PlayMusic();
             InitializeComponent();
             System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
-            //newmusic.Stream = Properties.Resources.Background;
+            newmusic.Stream = Properties.Resources.Background;
             newmusic.Play();
         }
 
