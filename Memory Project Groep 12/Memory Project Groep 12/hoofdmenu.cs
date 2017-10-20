@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
-using System.IO;
 using System.Media;
+using System.IO;
 
 namespace Memory_Project_Groep_12
 {
@@ -22,8 +22,10 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
             System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
             newmusic.Stream = Properties.Resources.Background;
-            newmusic.Play();
+            newmusic.PlayLooping();
         }
+
+
 
         public void PlayMusic()
         {
@@ -34,9 +36,17 @@ namespace Memory_Project_Groep_12
             }
         }
 
+        public void Clickmusic()
+        {
+            InitializeComponent();
+            System.Media.SoundPlayer newsound = new System.Media.SoundPlayer();
+            newsound.Stream = Properties.Resources.Click;
+            newsound.Play();
+        }
+
         private void play_Click(object sender, EventArgs e)
         {
-            Play();
+            Clickmusic();
             this.Hide();
             var hoofdmenu = new spelers();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -45,13 +55,13 @@ namespace Memory_Project_Groep_12
 
         private void quit_Click(object sender, EventArgs e)
         {
-            Play();
+            Clickmusic();
             System.Windows.Forms.Application.Exit();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
-            Play();
+            Clickmusic();
             this.Hide();
             var hoofdmenu = new Highscores();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -60,7 +70,7 @@ namespace Memory_Project_Groep_12
 
         private void over_Click(object sender, EventArgs e)
         {
-            Play();
+            Clickmusic();
             this.Hide();
             var hoofdmenu = new over();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -77,12 +87,7 @@ namespace Memory_Project_Groep_12
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
         }
-        static public void Play()
-        {
-            string soundfile = "Sound/Click.wav";
-            var sound = new System.Media.SoundPlayer(soundfile);
-            sound.Play();
-        }
+
         private void muteUnmute_CheckedChanged(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox muteUnmute = (System.Windows.Forms.CheckBox)sender;
