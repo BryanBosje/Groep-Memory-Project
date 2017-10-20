@@ -20,8 +20,9 @@ namespace Memory_Project_Groep_12
         private void terug_Click(object sender, EventArgs e)
         {
             this.Hide();
-            hoofdmenu openen = new hoofdmenu();
-            openen.ShowDialog();
+            var opties = new hoofdmenu();
+            opties.Closed += (s, args) => this.Close();
+            opties.Show();
         }
 
         private void quit_Click(object sender, EventArgs e)
