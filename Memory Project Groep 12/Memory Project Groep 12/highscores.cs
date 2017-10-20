@@ -35,7 +35,7 @@ namespace Memory_Project_Groep_12
 
             for (int i =0; i < HighscoreN.Length; i++)
             {
-                NaamLijst.Text += "\n" + HighscoreN[i];
+                NaamLijst.Text += HighscoreN[i] + "\n";
             }
 
            /* int[] HighscoreP = new int[10];
