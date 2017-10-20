@@ -31,12 +31,13 @@
             this.terug = new System.Windows.Forms.Button();
             this.quit = new System.Windows.Forms.Button();
             this.NaamList = new System.Windows.Forms.ListBox();
+            this.test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // terug
             // 
             this.terug.Location = new System.Drawing.Point(397, 266);
-            this.terug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terug.Margin = new System.Windows.Forms.Padding(2);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(56, 38);
             this.terug.TabIndex = 8;
@@ -47,7 +48,7 @@
             // quit
             // 
             this.quit.Location = new System.Drawing.Point(397, 309);
-            this.quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quit.Margin = new System.Windows.Forms.Padding(2);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(56, 38);
             this.quit.TabIndex = 7;
@@ -63,15 +64,26 @@
             this.NaamList.Size = new System.Drawing.Size(64, 121);
             this.NaamList.TabIndex = 16;
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(185, 89);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(75, 23);
+            this.test.TabIndex = 17;
+            this.test.Text = "Test";
+            this.test.UseVisualStyleBackColor = true;
+            this.test.Click += new System.EventHandler(this.test_Click);
+            // 
             // Highscores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 357);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.NaamList);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Highscores";
             this.Text = "Memory - highscores";
@@ -85,5 +97,6 @@
         private System.Windows.Forms.Button terug;
         private System.Windows.Forms.Button quit;
         private System.Windows.Forms.ListBox NaamList;
+        private System.Windows.Forms.Button test;
     }
 }

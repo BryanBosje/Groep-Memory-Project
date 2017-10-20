@@ -41,7 +41,7 @@
             // terug
             // 
             this.terug.Location = new System.Drawing.Point(391, 226);
-            this.terug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terug.Margin = new System.Windows.Forms.Padding(2);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(64, 38);
             this.terug.TabIndex = 10;
@@ -52,7 +52,7 @@
             // quit
             // 
             this.quit.Location = new System.Drawing.Point(391, 309);
-            this.quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quit.Margin = new System.Windows.Forms.Padding(2);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(64, 38);
             this.quit.TabIndex = 9;
@@ -63,7 +63,7 @@
             // opnieuw
             // 
             this.opnieuw.Location = new System.Drawing.Point(391, 184);
-            this.opnieuw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.opnieuw.Margin = new System.Windows.Forms.Padding(2);
             this.opnieuw.Name = "opnieuw";
             this.opnieuw.Size = new System.Drawing.Size(64, 38);
             this.opnieuw.TabIndex = 11;
@@ -129,7 +129,7 @@
             this.Controls.Add(this.opnieuw);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "game";
             this.Text = "Memory - game";
             this.Load += new System.EventHandler(this.game_Load);

@@ -12,9 +12,10 @@ namespace Memory_Project_Groep_12
 {
     public partial class Highscores : Form
     {
-        public Highscores()
+        public Highscores(/* string user*/)
         {
             InitializeComponent();
+           // NaamList.Text = user;
         }
 
         private void Highscores_Load(object sender, EventArgs e)
@@ -39,6 +40,12 @@ namespace Memory_Project_Groep_12
         private void quit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+                
+        private void test_Click(object sender, EventArgs e)
+        {
+           // Highscores ss = new Highscores(NaamList.Text);
+           // ss.Show();
         }
     }
 }

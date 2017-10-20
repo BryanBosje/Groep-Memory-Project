@@ -48,6 +48,7 @@ namespace Memory_Project_Groep_12
 
         private void SaveNaam_Click(object sender, EventArgs e)
         {
+            
             if (NaamInput.Text != "")
             {
                 NaamList.Items.Add(NaamInput.Text);
