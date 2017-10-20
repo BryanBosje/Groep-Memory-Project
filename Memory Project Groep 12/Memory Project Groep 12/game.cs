@@ -18,6 +18,10 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
         }
 
+        PictureBox prev;
+        byte flag = 0;
+        int remain = 8;
+
         void Resetimage()
         {
             foreach (Control x in this.Controls)
@@ -40,6 +44,35 @@ namespace Memory_Project_Groep_12
             }
         }
 
+        void SetTagRandom()
+        {
+            int[] arr = new int[16];
+            int index = 0;
+            Random rand = new Random();
+            int r;
+            while (index < 16)
+            {
+                r = rand.Next(1, 17);
+                if (Array.IndexOf(arr, r) == -1)
+                {
+                    arr[index] = r;
+                    index++;
+                }
+            }
+            for (index = 0; index < 16; index++)
+            {
+                if (arr[index] > 8) arr[index] -= 8;
+            }
+            index = 0;
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    (x as PictureBox).Tag = arr[index].ToString();
+                    index++;
+                }
+            }
+        }
 
         private void Terug_Click(object sender, EventArgs e)
         {
@@ -59,15 +92,40 @@ namespace Memory_Project_Groep_12
             Application.Restart();
         }
 
+        void Compare(PictureBox previous, PictureBox current)
+        {
+            if (previous.Tag.ToString() == current.Tag.ToString())
+            {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(500);
+                previous.Visible = false;
+                current.Visible = false;
+            }
+        }
+
         private void Game_Load(object sender, EventArgs e)
         {
             Resetimage();
-            //ResetTags();
+            ResetTags();
+            SetTagRandom();
         }
 
+        #region
         private void PictureBox1_Click(object sender, EventArgs e)
         {
+            PictureBox current = (sender as PictureBox);
             (sender as PictureBox).Image = Image.FromFile((sender as PictureBox).Tag.ToString() + ".png");
+            if(flag == 0)
+            {
+                prev = current;
+                flag = 1;
+            }
+            else if (prev != current)
+            {
+                Compare(prev, current);
+                flag = 0;
+            }
+
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
@@ -144,5 +202,12 @@ namespace Memory_Project_Groep_12
         {
 
         }
+        #endregion
+        //Cards
+
+
+
+
+        }
     }
-}
+
