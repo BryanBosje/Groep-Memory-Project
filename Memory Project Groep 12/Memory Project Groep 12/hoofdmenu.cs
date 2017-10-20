@@ -28,7 +28,7 @@ namespace Memory_Project_Groep_12
             bool playing = false;
             if (playing == false)
             {
-                hoofdmenu.newmusic.Play();
+                //hoofdmenu.newmusic.Play();
             }
         }
         private void play_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace Memory_Project_Groep_12
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
-            hoofdmenu.newmusic.settings.mute = muteUnmute.Checked;
+           // hoofdmenu.newmusic.settings.mute = muteUnmute.Checked;
         }
 
         public static string Achtergrond = "";
