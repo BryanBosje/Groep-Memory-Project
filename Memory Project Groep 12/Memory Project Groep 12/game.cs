@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace Memory_Project_Groep_12
 {
@@ -18,57 +17,24 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void terug_Click(object sender, EventArgs e)
         {
-=======
-        void Resetimage()
-        {
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox)
-                {
-                    (x as PictureBox).Image = Properties.Resources._0;
-                }
-            }
-        }
-
-        void ResetTags()
-        {
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox)
-                {
-                    (x as PictureBox).Tag = "0";
-                }
-            }
-        }
-
-
-        private void Terug_Click(object sender, EventArgs e)
-        {
->>>>>>> bryan
             this.Hide();
             var game = new hoofdmenu();
             game.Closed += (s, args) => this.Close();
             game.Show();
         }
 
-        private void Quit_Click(object sender, EventArgs e)
+        private void quit_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
-<<<<<<< HEAD
         private void opnieuw_Click(object sender, EventArgs e)
-=======
-        private void Opnieuw_Click(object sender, EventArgs e)
->>>>>>> bryan
         {
             Application.Restart();
         }
 
-<<<<<<< HEAD
         private void game_Load(object sender, EventArgs e)
         {
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -81,92 +47,6 @@ namespace Memory_Project_Groep_12
 
             label1.Text = "Speler 1 = " + spelers.naam1;
             label2.Text = "Speler 2 = " + spelers.naam2;
-=======
-        private void Game_Load(object sender, EventArgs e)
-        {
-            Resetimage();
-            //ResetTags();
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            (sender as PictureBox).Image = Image.FromFile((sender as PictureBox).Tag.ToString() + ".png");
-        }
-
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox16_Click(object sender, EventArgs e)
-        {
-
->>>>>>> bryan
         }
     }
 }

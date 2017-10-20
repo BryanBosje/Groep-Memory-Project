@@ -25,11 +25,7 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-<<<<<<< HEAD
             var hoofdmenu = new spelers();
-=======
-            var hoofdmenu = new game();
->>>>>>> bryan
             hoofdmenu.Closed += (s, args) => this.Close();
             hoofdmenu.Show();
         }
@@ -44,11 +40,7 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-<<<<<<< HEAD
             var hoofdmenu = new Highscores();
-=======
-            var hoofdmenu = new opties();
->>>>>>> bryan
             hoofdmenu.Closed += (s, args) => this.Close();
             hoofdmenu.Show();
         }
@@ -57,18 +49,13 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-<<<<<<< HEAD
             var hoofdmenu = new over();
-=======
-            var hoofdmenu = new Highscores();
->>>>>>> bryan
             hoofdmenu.Closed += (s, args) => this.Close();
             hoofdmenu.Show();
         }
 
         private void hoofdmenu_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             BackgroundImageLayout = ImageLayout.Stretch;
             switch (hoofdmenu.Achtergrond)
             {
@@ -76,18 +63,6 @@ namespace Memory_Project_Groep_12
                 case "auto": this.BackgroundImage = Properties.Resources.auto; break;
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
-=======
-            Play();
-            this.Hide();
-            var hoofdmenu = new over();
-            hoofdmenu.Closed += (s, args) => this.Close();
-            hoofdmenu.Show();
-        }
-
-        private void hoofdmenu_Load(object sender, EventArgs e)
-        {
-
->>>>>>> bryan
         }
         static public void Play()
         {
@@ -102,7 +77,6 @@ namespace Memory_Project_Groep_12
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
             player.settings.mute = muteUnmute.Checked;
-<<<<<<< HEAD
         }
 
         public static string Achtergrond = "";
@@ -128,8 +102,6 @@ namespace Memory_Project_Groep_12
         {
             Achtergrond = "auto";
             this.BackgroundImage = Properties.Resources.auto;
-=======
->>>>>>> bryan
         }
     }
 }
