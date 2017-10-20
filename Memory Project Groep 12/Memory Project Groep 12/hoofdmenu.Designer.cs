@@ -38,6 +38,9 @@
             this.Standaard = new System.Windows.Forms.Button();
             this.frozen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // play
@@ -118,9 +121,9 @@
             // 
             // Standaard
             // 
-            this.Standaard.Location = new System.Drawing.Point(116, 259);
+            this.Standaard.Location = new System.Drawing.Point(100, 259);
             this.Standaard.Name = "Standaard";
-            this.Standaard.Size = new System.Drawing.Size(103, 46);
+            this.Standaard.Size = new System.Drawing.Size(119, 46);
             this.Standaard.TabIndex = 28;
             this.Standaard.Text = "STANDAARD";
             this.Standaard.UseVisualStyleBackColor = true;
@@ -139,17 +142,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 229);
+            this.label1.Location = new System.Drawing.Point(97, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Thema\'s";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(168, 380);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Master volume";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.AutoSize = false;
+            this.trackBar1.BackColor = System.Drawing.SystemColors.Window;
+            this.trackBar1.Location = new System.Drawing.Point(133, 400);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(168, 25);
+            this.trackBar1.TabIndex = 34;
+            this.trackBar1.Value = 50;
             // 
             // hoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 439);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.starwars);
             this.Controls.Add(this.auto);
@@ -165,6 +193,7 @@
             this.Name = "hoofdmenu";
             this.Text = "Memory - menu";
             this.Load += new System.EventHandler(this.hoofdmenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +211,8 @@
         private System.Windows.Forms.Button Standaard;
         private System.Windows.Forms.Button frozen;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 

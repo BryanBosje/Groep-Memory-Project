@@ -13,12 +13,23 @@ namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        
         public hoofdmenu()
         {
+            PlayMusic();
             InitializeComponent();
-            player.URL = ("Sound/Background.MP3");
-            player.controls.play();
+            System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
+            //newmusic.Stream = Properties.Resources.Background;
+            newmusic.Play();
+        }
+
+        public void PlayMusic()
+        {
+            bool playing = false;
+            if (playing == false)
+            {
+                //hoofdmenu.newmusic.Play();
+            }
         }
 
         private void play_Click(object sender, EventArgs e)
@@ -76,7 +87,7 @@ namespace Memory_Project_Groep_12
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
-            player.settings.mute = muteUnmute.Checked;
+            // hoofdmenu.newmusic.settings.mute = muteUnmute.Checked;
         }
 
         public static string Achtergrond = "";
@@ -102,6 +113,11 @@ namespace Memory_Project_Groep_12
         {
             Achtergrond = "auto";
             this.BackgroundImage = Properties.Resources.auto;
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            // player.settings.volume = trackBar1.Value;
         }
     }
 }
