@@ -25,7 +25,7 @@ namespace Memory_Project_Groep_12
         {
             Play();
             this.Hide();
-            var hoofdmenu = new game();
+            var hoofdmenu = new spelers();
             hoofdmenu.Closed += (s, args) => this.Close();
             hoofdmenu.Show();
         }

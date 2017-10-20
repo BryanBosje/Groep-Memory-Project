@@ -10,43 +10,37 @@ using System.Windows.Forms;
 
 namespace Memory_Project_Groep_12
 {
-    public partial class game : Form
+    public partial class spelers : Form
     {
-        public game()
+        public spelers()
         {
             InitializeComponent();
         }
 
-        private void terug_Click(object sender, EventArgs e)
+        public static string naam1 = "";
+
+        public static string naam2 = "";
+
+        private void start_Click(object sender, EventArgs e)
         {
+            naam1 = tekst_speler1.Text;
+            naam2 = tekst_speler2.Text;
             this.Hide();
-            var game = new hoofdmenu();
-            game.Closed += (s, args) => this.Close();
-            game.Show();
+            var spelers = new game();
+            spelers.Closed += (s, args) => this.Close();
+            spelers.Show();
         }
 
-        private void quit_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
-        private void opnieuw_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
-
-        private void game_Load(object sender, EventArgs e)
+        private void spelers_Load(object sender, EventArgs e)
         {
             BackgroundImageLayout = ImageLayout.Stretch;
+
             switch (hoofdmenu.Achtergrond)
             {
                 case "frozen": this.BackgroundImage = Properties.Resources.frozen; break;
                 case "auto": this.BackgroundImage = Properties.Resources.auto; break;
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
-
-            label1.Text = "Speler 1 = " + spelers.naam1;
-            label2.Text = "Speler 2 = " + spelers.naam2;
         }
     }
 }

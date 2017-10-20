@@ -31,6 +31,8 @@
             this.terug = new System.Windows.Forms.Button();
             this.quit = new System.Windows.Forms.Button();
             this.opnieuw = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // terug
@@ -63,11 +65,29 @@
             this.opnieuw.UseVisualStyleBackColor = true;
             this.opnieuw.Click += new System.EventHandler(this.opnieuw_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(472, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(472, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 13;
+            // 
             // game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 439);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.opnieuw);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
@@ -75,6 +95,7 @@
             this.Text = "Memory - game";
             this.Load += new System.EventHandler(this.game_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +104,7 @@
         private System.Windows.Forms.Button terug;
         private System.Windows.Forms.Button quit;
         private System.Windows.Forms.Button opnieuw;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
