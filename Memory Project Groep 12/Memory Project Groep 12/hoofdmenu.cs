@@ -57,7 +57,6 @@ namespace Memory_Project_Groep_12
 
         private void over_Click(object sender, EventArgs e)
         {
-            Play();
             this.Hide();
             var hoofdmenu = new over();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -74,11 +73,11 @@ namespace Memory_Project_Groep_12
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
         }
-        static public void Play()
+        public void Play()
         {
-            string soundfile = "Sound/Click.wav";
-            var sound = new System.Media.SoundPlayer(soundfile);
-            sound.Play();
+            System.Media.SoundPlayer ClickPlay = new System.Media.SoundPlayer();
+            ClickPlay.Stream = Properties.Resources.Click;
+            ClickPlay.Play();
         }
         private void muteUnmute_CheckedChanged(object sender, EventArgs e)
         {
