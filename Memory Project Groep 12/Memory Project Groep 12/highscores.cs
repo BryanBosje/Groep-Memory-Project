@@ -15,6 +15,7 @@ namespace Memory_Project_Groep_12
         public Highscores()
         {
             InitializeComponent();
+            hoofdmenu.PlayMusic();
         }
 
         private void Highscores_Load(object sender, EventArgs e)
