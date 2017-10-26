@@ -89,7 +89,12 @@ namespace Memory_Project_Groep_12
 
         private void Opnieuw_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            this.Dispose();
+            GC.Collect();
+            var hoofdmenu = new game();
+            hoofdmenu.Closed += (s, args) => this.Close();
+            GC.Collect();
+            hoofdmenu.Show();
         }
 
         void Compare(PictureBox previous, PictureBox current)
