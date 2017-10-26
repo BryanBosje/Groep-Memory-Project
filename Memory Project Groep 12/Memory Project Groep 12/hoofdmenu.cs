@@ -10,12 +10,19 @@ using System.Windows.Forms;
 using WMPLib;
 using System.Media;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
         System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
+        [DllImport("winmm.dll")]
+        public static extern int waveOutGetVolume(IntPtr hwo, out uint dwVolume);
+
+        [DllImport("winmm.dll")]
+        public static extern int waveOutSetVolume(IntPtr hwo, uint dwVolume);
+
         public hoofdmenu()
         {
             PlayMusic();
@@ -35,9 +42,8 @@ namespace Memory_Project_Groep_12
         }
         private void play_Click(object sender, EventArgs e)
         {
-            //Play();
             this.Hide();
-            var hoofdmenu = new game();
+            var hoofdmenu = new spelers();
             hoofdmenu.Closed += (s, args) => this.Close();
             hoofdmenu.Show();
         }
@@ -126,7 +132,7 @@ namespace Memory_Project_Groep_12
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-           //newmusic.
+          // newmusic
         }
     }
 }
