@@ -101,6 +101,12 @@ namespace Memory_Project_Groep_12
                 previous.Visible = false;
                 current.Visible = false;
             }
+            else
+            {
+                previous.Image = Image.FromFile("0.png");
+                current.Image = Image.FromFile("0.png");
+
+            }
         }
 
         private void Game_Load(object sender, EventArgs e)
