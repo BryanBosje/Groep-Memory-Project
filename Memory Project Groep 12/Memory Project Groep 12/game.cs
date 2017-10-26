@@ -103,9 +103,10 @@ namespace Memory_Project_Groep_12
             }
             else
             {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(500);
                 previous.Image = Image.FromFile("0.png");
                 current.Image = Image.FromFile("0.png");
-
             }
         }
 
