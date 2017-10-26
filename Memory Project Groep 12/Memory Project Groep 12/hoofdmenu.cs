@@ -87,7 +87,7 @@ namespace Memory_Project_Groep_12
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
-           // hoofdmenu.newmusic.settings.mute = muteUnmute.Checked;
+            // muteUnmute.Checked;
         }
 
         public static string Achtergrond = "";
