@@ -15,6 +15,7 @@ namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
+        System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
         public hoofdmenu()
         {
             PlayMusic();
@@ -22,7 +23,7 @@ namespace Memory_Project_Groep_12
         }
         public void PlayMusic()
         {
-            System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
+            //System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
             newmusic.Stream = Properties.Resources.Background;
             //newmusic.Play();
             bool playing = false;
@@ -87,7 +88,15 @@ namespace Memory_Project_Groep_12
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
-            // muteUnmute.Checked;
+           if (muteUnmute.Checked)
+            {
+                newmusic.Stop();
+            }
+           else
+            {
+                newmusic.Play();
+            }
+           
         }
 
         public static string Achtergrond = "";
@@ -117,7 +126,7 @@ namespace Memory_Project_Groep_12
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-           // player.settings.volume = trackBar1.Value;
+           //newmusic.
         }
     }
 }
