@@ -26,6 +26,29 @@ namespace Memory_Project_Groep_12
                 case "auto": this.BackgroundImage = Properties.Resources.auto; break;
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
+            //NaamLijst.Text = spelers.naam1;
+
+            string[] HighscoreN = new string[2];
+            HighscoreN[0] = spelers.naam1;
+            HighscoreN[1] = spelers.naam2;
+
+            for (int i = 0; i < HighscoreN.Length; i++)
+            {
+                NaamLijst.Text += HighscoreN[i] + "\n";
+            }
+
+            /* int[] HighscoreP = new int[10];
+             for (int i = 0; i < HighscoreN.Length; i++)
+             {
+                 HighscoreP[0] = 0; //placeholder
+                 HighscoreP[1] = 0; //placeholder
+
+                 foreach (int punten in HighscoreP)
+                 {
+                     HighscoreP[punten] = 5;
+                 }
+             }
+             */
         }
 
         private void terug_Click(object sender, EventArgs e)
