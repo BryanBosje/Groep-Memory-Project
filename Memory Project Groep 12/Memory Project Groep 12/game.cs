@@ -20,7 +20,7 @@ namespace Memory_Project_Groep_12
 
         PictureBox prev;
         byte flag = 0;
-        int remain = 8;
+        //int remain = 8;
 
         void Resetimage()
         {
@@ -124,7 +124,7 @@ namespace Memory_Project_Groep_12
             SetTagRandom();
         }
         #region
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
             PictureBox current = (sender as PictureBox);
             (sender as PictureBox).Image = Image.FromFile((sender as PictureBox).Tag.ToString() + ".png");
@@ -139,77 +139,77 @@ namespace Memory_Project_Groep_12
                 flag = 0;
             }
         }
-        private void pictureBox16_Click(object sender, EventArgs e)
+        private void PictureBox16_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void PictureBox15_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox15_Click(object sender, EventArgs e)
+        private void PictureBox14_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void PictureBox13_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
+        private void PictureBox12_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void PictureBox11_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
+        private void PictureBox10_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void PictureBox9_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
+        private void PictureBox8_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void PictureBox7_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void PictureBox6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void PictureBox5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void PictureBox4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
 
         }
