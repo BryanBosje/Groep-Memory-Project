@@ -12,14 +12,14 @@ namespace Memory_Project_Groep_12
 {
     public partial class spelers : Form
     {
+        //Namen
+        public static string naam1 = "";
+        public static string naam2 = "";
+
         public spelers()
         {
             InitializeComponent();
         }
-
-        public static string naam1 = "";
-
-        public static string naam2 = "";
 
         private void start_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,6 @@ namespace Memory_Project_Groep_12
             var spelers = new game();
             spelers.Closed += (s, args) => this.Close();
             spelers.Show();
-                        
         }
 
         private void spelers_Load(object sender, EventArgs e)

@@ -17,7 +17,6 @@ namespace Memory_Project_Groep_12
             InitializeComponent();
         }
 
-                
         private void Highscores_Load(object sender, EventArgs e)
         {
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -33,23 +32,23 @@ namespace Memory_Project_Groep_12
             HighscoreN[0] = spelers.naam1;
             HighscoreN[1] = spelers.naam2;
 
-            for (int i =0; i < HighscoreN.Length; i++)
+            for (int i = 0; i < HighscoreN.Length; i++)
             {
                 NaamLijst.Text += HighscoreN[i] + "\n";
             }
 
-           /* int[] HighscoreP = new int[10];
-            for (int i = 0; i < HighscoreN.Length; i++)
-            {
-                HighscoreP[0] = 0; //placeholder
-                HighscoreP[1] = 0; //placeholder
+            /* int[] HighscoreP = new int[10];
+             for (int i = 0; i < HighscoreN.Length; i++)
+             {
+                 HighscoreP[0] = 0; //placeholder
+                 HighscoreP[1] = 0; //placeholder
 
-                foreach (int punten in HighscoreP)
-                {
-                    HighscoreP[punten] = 5;
-                }
-            }
-            */
+                 foreach (int punten in HighscoreP)
+                 {
+                     HighscoreP[punten] = 5;
+                 }
+             }
+             */
         }
 
         private void terug_Click(object sender, EventArgs e)

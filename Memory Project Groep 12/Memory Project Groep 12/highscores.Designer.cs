@@ -30,8 +30,8 @@
         {
             this.terug = new System.Windows.Forms.Button();
             this.quit = new System.Windows.Forms.Button();
-            this.NaamLijst = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.NaamLijst = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // terug
@@ -56,14 +56,6 @@
             this.quit.UseVisualStyleBackColor = true;
             this.quit.Click += new System.EventHandler(this.quit_Click);
             // 
-            // NaamLijst
-            // 
-            this.NaamLijst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NaamLijst.Location = new System.Drawing.Point(12, 34);
-            this.NaamLijst.Name = "NaamLijst";
-            this.NaamLijst.Size = new System.Drawing.Size(141, 313);
-            this.NaamLijst.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -71,8 +63,16 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 17);
-            this.label1.TabIndex = 10;
+            this.label1.TabIndex = 12;
             this.label1.Text = "Highscore Namen:";
+            // 
+            // NaamLijst
+            // 
+            this.NaamLijst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NaamLijst.Location = new System.Drawing.Point(12, 35);
+            this.NaamLijst.Name = "NaamLijst";
+            this.NaamLijst.Size = new System.Drawing.Size(141, 313);
+            this.NaamLijst.TabIndex = 11;
             // 
             // Highscores
             // 
@@ -97,7 +97,7 @@
 
         private System.Windows.Forms.Button terug;
         private System.Windows.Forms.Button quit;
-        private System.Windows.Forms.Label NaamLijst;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NaamLijst;
     }
 }

@@ -8,22 +8,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Media;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Memory_Project_Groep_12
 {
     public partial class hoofdmenu : Form
     {
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
+        [DllImport("winmm.dll")]
+        public static extern int waveOutGetVolume(IntPtr hwo, out uint dwVolume);
+
+        [DllImport("winmm.dll")]
+        public static extern int waveOutSetVolume(IntPtr hwo, uint dwVolume);
+
         public hoofdmenu()
         {
+            PlayMusic();
             InitializeComponent();
-            player.URL = ("Sound/Background.MP3");
-            player.controls.play();
         }
-
+        public void PlayMusic()
+        {
+            //System.Media.SoundPlayer newmusic = new System.Media.SoundPlayer();
+            newmusic.Stream = Properties.Resources.Background;
+            //newmusic.Play();
+            bool playing = false;
+            if (playing == false)
+            {
+                newmusic.Play();
+                playing = true;
+            }
+        }
         private void play_Click(object sender, EventArgs e)
         {
-            Play();
             this.Hide();
             var hoofdmenu = new spelers();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -32,13 +50,13 @@ namespace Memory_Project_Groep_12
 
         private void quit_Click(object sender, EventArgs e)
         {
-            Play();
+            //Play();
             System.Windows.Forms.Application.Exit();
         }
 
         private void highscores_Click(object sender, EventArgs e)
         {
-            Play();
+            //Play();
             this.Hide();
             var hoofdmenu = new Highscores();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -47,7 +65,7 @@ namespace Memory_Project_Groep_12
 
         private void over_Click(object sender, EventArgs e)
         {
-            Play();
+            //Play();
             this.Hide();
             var hoofdmenu = new over();
             hoofdmenu.Closed += (s, args) => this.Close();
@@ -64,19 +82,27 @@ namespace Memory_Project_Groep_12
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
         }
-        static public void Play()
-        {
-            string soundfile = "Sound/Click.wav";
-            var sound = new System.Media.SoundPlayer(soundfile);
-           // sound.Play();
-        }
+        //public void Play()
+        //{
+        //    System.Media.SoundPlayer ClickPlay = new System.Media.SoundPlayer();
+        //    ClickPlay.Stream = Properties.Resources.Click;
+        //    ClickPlay.Play();
+        //}
         private void muteUnmute_CheckedChanged(object sender, EventArgs e)
         {
             System.Windows.Forms.CheckBox muteUnmute = (System.Windows.Forms.CheckBox)sender;
 
             muteUnmute.Text = muteUnmute.Checked ? "Un-mute Audio" : muteUnmute.Text = "Mute Audio";
 
-            player.settings.mute = muteUnmute.Checked;
+           if (muteUnmute.Checked)
+            {
+                newmusic.Stop();
+            }
+           else
+            {
+                newmusic.Play();
+            }
+           
         }
 
         public static string Achtergrond = "";
@@ -102,6 +128,11 @@ namespace Memory_Project_Groep_12
         {
             Achtergrond = "auto";
             this.BackgroundImage = Properties.Resources.auto;
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+          // newmusic
         }
     }
 }
