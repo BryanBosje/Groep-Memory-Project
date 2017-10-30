@@ -37,7 +37,7 @@
             // terug
             // 
             this.terug.Location = new System.Drawing.Point(397, 266);
-            this.terug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.terug.Margin = new System.Windows.Forms.Padding(2);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(56, 38);
             this.terug.TabIndex = 8;
@@ -48,7 +48,7 @@
             // quit
             // 
             this.quit.Location = new System.Drawing.Point(397, 309);
-            this.quit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quit.Margin = new System.Windows.Forms.Padding(2);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(56, 38);
             this.quit.TabIndex = 7;
@@ -69,7 +69,7 @@
             // NaamLijst
             // 
             this.NaamLijst.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NaamLijst.Location = new System.Drawing.Point(12, 34);
+            this.NaamLijst.Location = new System.Drawing.Point(12, 35);
             this.NaamLijst.Name = "NaamLijst";
             this.NaamLijst.Size = new System.Drawing.Size(141, 313);
             this.NaamLijst.TabIndex = 11;
@@ -83,7 +83,7 @@
             this.Controls.Add(this.NaamLijst);
             this.Controls.Add(this.terug);
             this.Controls.Add(this.quit);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Highscores";
             this.Text = "Memory - highscores";

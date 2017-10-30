@@ -13,13 +13,41 @@ namespace Memory_Project_Groep_12
 {
     public partial class game : Form
     {
+        int timer, playerScore1, playerScore2, pairsLeft = 8;
+        bool playerTurn = false; //false = player 1 turn, true = player 2 turn
+
+        
+        PictureBox prev;
+        byte flag = 0;
+
         public game()
         {
             InitializeComponent();
+            PlayerTurnLabel.Text = spelers.naam1 + " is aan de beurt.";
+            timer1.Start();
         }
 
-        PictureBox prev;
-        byte flag = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer = Convert.ToInt32(TimerCounter.Text);
+            timer -= 1;
+            TimerCounter.Text = Convert.ToString(timer);
+            if (timer == 0)
+            {
+                timer1.Stop();
+                MessageBox.Show("Time's Up!");
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+
+        }
         //int remain = 8;
 
         void Resetimage()
@@ -99,6 +127,21 @@ namespace Memory_Project_Groep_12
                 System.Threading.Thread.Sleep(500);
                 previous.Visible = false;
                 current.Visible = false;
+                //ScoreCounter.Text = Convert.ToString(Convert.ToInt32(ScoreCounter.Text) + 10);
+                pairsLeft--;
+                Points();
+
+                if(pairsLeft <= 0)
+                {
+                    if (playerScore1 > playerScore2)
+                        MessageBox.Show(spelers.naam1 + " Wins ya faggot");
+                    else if (playerScore2 > playerScore1)
+                        MessageBox.Show(spelers.naam2 + " Has no life");
+                    else
+                        MessageBox.Show("It's a tie you plebs!");
+
+                    Highscore();
+                }
             }
             else
             {
@@ -106,6 +149,32 @@ namespace Memory_Project_Groep_12
                 System.Threading.Thread.Sleep(500);
                 previous.Image = Image.FromFile("0.png");
                 current.Image = Image.FromFile("0.png");
+                //Next Player
+                if (playerTurn == true)
+                {
+                    playerTurn = false;
+                    PlayerTurnLabel.Text = spelers.naam1 + " is aan de beurt.";
+                }
+                else
+                {
+                    playerTurn = true;
+                    PlayerTurnLabel.Text = spelers.naam2 + " is aan de beurt.";
+                }
+            }
+        }
+        public void Points()
+        {
+            if (playerTurn == false)
+            {
+                //ScoreCounter1.Text = Convert.ToString(Convert.ToInt32(ScoreCounter1.Text) + 10);
+                playerScore1 = Convert.ToInt32(ScoreCounter1.Text) + 10;
+                ScoreCounter1.Text = Convert.ToString(playerScore1);
+            }
+            else
+            {
+                //ScoreCounter2.Text = Convert.ToString(Convert.ToInt32(ScoreCounter2.Text) + 10);
+                playerScore2 = Convert.ToInt32(ScoreCounter2.Text) + 10;
+                ScoreCounter2.Text = Convert.ToString(playerScore2);
             }
         }
         private void Game_Load(object sender, EventArgs e)
@@ -117,12 +186,26 @@ namespace Memory_Project_Groep_12
                 case "auto": this.BackgroundImage = Properties.Resources.auto; break;
                 case "starwars": this.BackgroundImage = Properties.Resources.starwars; break;
             }
-            Naam1.Text = "Speler 1 = " + spelers.naam1;
-            Naam2.Text = "Speler 2 = " + spelers.naam2;
+            Naam1.Text = /*"Speler 1 = " + */spelers.naam1;
+            Naam2.Text = /*"Speler 2 = " + */spelers.naam2;
             Resetimage();
             ResetTags();
             SetTagRandom();
         }
+
+        public void HighscoreB_Click_1(object sender, EventArgs e)
+        {
+            Highscore();
+        }
+        
+        public void Highscore()
+        {
+            this.Hide();
+            var highscores = new Highscores();
+            highscores.Closed += (s, args) => this.Close();
+            highscores.Show();
+        }
+        
         #region
         private void PictureBox1_Click(object sender, EventArgs e)
         {
