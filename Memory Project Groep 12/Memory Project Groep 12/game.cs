@@ -13,32 +13,34 @@ namespace Memory_Project_Groep_12
 {
     public partial class game : Form
     {
+        //game runtime related variables
         int timer, playerScore1, playerScore2, pairsLeft = 8;
         bool playerTurn = false; //false = player 1 turn, true = player 2 turn
-
         
+        //Variables concerning the comparing and checking of cards
         PictureBox prev;
         byte flag = 0;
 
+        //Initialize the game
         public game()
         {
             InitializeComponent();
-            PlayerTurnLabel.Text = spelers.naam1 + " is aan de beurt.";
-            timer1.Start();
+            PlayerTurnLabel.Text = spelers.naam1 + " is aan de beurt."; //shows in a label who's turn it is
+            timer1.Start(); //Starts the timer
         }
-
+        //The actual timer
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer = Convert.ToInt32(TimerCounter.Text);
-            timer -= 1;
-            TimerCounter.Text = Convert.ToString(timer);
-            if (timer == 0)
+            timer = Convert.ToInt32(TimerCounter.Text); //fills timer variable with text from timer label from form
+            timer -= 1; //ticks the timer down by 1 
+            TimerCounter.Text = Convert.ToString(timer); //converts the variable back to the text in timer label
+            if (timer == 0) //if the timer reaches zero show message and stop timer
             {
                 timer1.Stop();
                 MessageBox.Show("Time's Up!");
             }
         }
-
+        //still empty timers
         private void timer2_Tick(object sender, EventArgs e)
         {
 
@@ -48,8 +50,7 @@ namespace Memory_Project_Groep_12
         {
 
         }
-        //int remain = 8;
-
+        //Resets card images to cardback
         void Resetimage()
         {
             foreach (Control x in this.Controls)
@@ -60,7 +61,7 @@ namespace Memory_Project_Groep_12
                 }
             }
         }
-
+        //Resets card tags
         void ResetTags()
         {
             foreach (Control x in this.Controls)
@@ -71,27 +72,30 @@ namespace Memory_Project_Groep_12
                 }
             }
         }
-
+        //randomizes the cards
         void SetTagRandom()
         {
-            int[] arr = new int[16];
+            int[] arr = new int[16]; //creates an array for the 16 cards
             int index = 0;
-            Random rand = new Random();
+            Random rand = new Random(); //creates a random variable
             int r;
+
             while (index < 16)
             {
-                r = rand.Next(1, 17);
+                r = rand.Next(1, 17);  
                 if (Array.IndexOf(arr, r) == -1)
                 {
                     arr[index] = r;
                     index++;
                 }
             }
+
             for (index = 0; index < 16; index++)
             {
                 if (arr[index] > 8) arr[index] -= 8;
             }
             index = 0;
+
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
@@ -101,12 +105,12 @@ namespace Memory_Project_Groep_12
                 }
             }
         }
-
+        //Restart application
         private void opnieuw_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
-
+        //Go back to menu
         private void back_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -114,11 +118,12 @@ namespace Memory_Project_Groep_12
             game.Closed += (s, args) => this.Close();
             game.Show();
         }
-
+        //Close application
         private void sluiten_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
+        //Compare selected cards
         void Compare(PictureBox previous, PictureBox current)
         {
             if (previous.Tag.ToString() == current.Tag.ToString())
@@ -127,14 +132,14 @@ namespace Memory_Project_Groep_12
                 System.Threading.Thread.Sleep(500);
                 previous.Visible = false;
                 current.Visible = false;
-                //ScoreCounter.Text = Convert.ToString(Convert.ToInt32(ScoreCounter.Text) + 10);
+                
                 pairsLeft--;
                 Points();
 
                 if(pairsLeft <= 0)
                 {
                     if (playerScore1 > playerScore2)
-                        MessageBox.Show(spelers.naam1 + " Wins ya faggot");
+                        MessageBox.Show(spelers.naam1 + " Has no life.");
                     else if (playerScore2 > playerScore1)
                         MessageBox.Show(spelers.naam2 + " Has no life");
                     else
