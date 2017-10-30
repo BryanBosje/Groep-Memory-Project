@@ -93,8 +93,15 @@ namespace Memory_Project_Groep_12
             GC.Collect();
             var hoofdmenu = new game();
             hoofdmenu.Closed += (s, args) => this.Close();
-            GC.Collect();
             hoofdmenu.Show();
+            ResetForm();
+        }
+
+        private void ResetForm()
+        {
+            ResetTags();
+            Resetimage();
+            SetTagRandom();
         }
 
         void Compare(PictureBox previous, PictureBox current)
@@ -137,7 +144,6 @@ namespace Memory_Project_Groep_12
                 Compare(prev, current);
                 flag = 0;
             }
-
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
