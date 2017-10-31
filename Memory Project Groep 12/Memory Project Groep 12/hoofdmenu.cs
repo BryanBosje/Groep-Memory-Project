@@ -112,6 +112,7 @@ namespace Memory_Project_Groep_12
         private void Standaard_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
+            Achtergrond = null;
         }
         //Frozen theme
         private void frozen_Click(object sender, EventArgs e)
