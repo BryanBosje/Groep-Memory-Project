@@ -55,6 +55,7 @@ namespace Memory_Project_Groep_12
        
         private void terug_Click(object sender, EventArgs e)
         {
+            game.Score_Reset();
             this.Hide();
             var highscores = new hoofdmenu();
             highscores.Closed += (s, args) => this.Close();

@@ -117,6 +117,7 @@ namespace Memory_Project_Groep_12
             var game = new hoofdmenu();
             game.Closed += (s, args) => this.Close();
             game.Show();
+            Score_Reset();
         }
         //Close application
         private void sluiten_Click(object sender, EventArgs e)
@@ -209,6 +210,11 @@ namespace Memory_Project_Groep_12
             var highscores = new Highscores();
             highscores.Closed += (s, args) => this.Close();
             highscores.Show();
+        }
+        public static void Score_Reset()
+        {
+            playerScore1 = 0;
+            playerScore2 = 0;
         }
         
         #region
