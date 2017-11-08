@@ -14,7 +14,7 @@ namespace Memory_Project_Groep_12
     public partial class game : Form
     {
         //game runtime related variables
-        int timer, playerScore1, playerScore2, pairsLeft = 8;
+        public static int timer, playerScore1, playerScore2, pairsLeft = 8;
         bool playerTurn = false; //false = player 1 turn, true = player 2 turn
         
         //Variables concerning the comparing and checking of cards
@@ -124,7 +124,7 @@ namespace Memory_Project_Groep_12
             System.Windows.Forms.Application.Exit();
         }
         //Compare selected cards
-        void Compare(PictureBox previous, PictureBox current)
+        public void Compare(PictureBox previous, PictureBox current)
         {
             if (previous.Tag.ToString() == current.Tag.ToString())
             {

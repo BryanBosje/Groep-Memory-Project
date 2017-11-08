@@ -29,13 +29,15 @@ namespace Memory_Project_Groep_12
             //NaamLijst.Text = spelers.naam1;
 
             string[] HighscoreN = new string[2];
-            HighscoreN[0] = spelers.naam1;
-            HighscoreN[1] = spelers.naam2;
+            HighscoreN[0] = spelers.naam1 + "\nScore: " + game.playerScore1;
+            HighscoreN[1] = spelers.naam2 + "\nScore: " + game.playerScore2;
 
             for (int i = 0; i < HighscoreN.Length; i++)
             {
                 NaamLijst.Text += HighscoreN[i] + "\n";
             }
+            
+            
 
             /* int[] HighscoreP = new int[10];
              for (int i = 0; i < HighscoreN.Length; i++)
@@ -50,7 +52,7 @@ namespace Memory_Project_Groep_12
              }
              */
         }
-
+       
         private void terug_Click(object sender, EventArgs e)
         {
             this.Hide();
