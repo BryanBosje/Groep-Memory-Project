@@ -45,10 +45,10 @@
             // 
             // play
             // 
-            this.play.Location = new System.Drawing.Point(170, 16);
-            this.play.Margin = new System.Windows.Forms.Padding(2);
+            this.play.Location = new System.Drawing.Point(227, 20);
+            this.play.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.play.Name = "play";
-            this.play.Size = new System.Drawing.Size(120, 37);
+            this.play.Size = new System.Drawing.Size(160, 46);
             this.play.TabIndex = 0;
             this.play.Text = "Start game";
             this.play.UseVisualStyleBackColor = true;
@@ -56,10 +56,10 @@
             // 
             // highscores
             // 
-            this.highscores.Location = new System.Drawing.Point(170, 66);
-            this.highscores.Margin = new System.Windows.Forms.Padding(2);
+            this.highscores.Location = new System.Drawing.Point(227, 81);
+            this.highscores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.highscores.Name = "highscores";
-            this.highscores.Size = new System.Drawing.Size(120, 37);
+            this.highscores.Size = new System.Drawing.Size(160, 46);
             this.highscores.TabIndex = 2;
             this.highscores.Text = "Highscores";
             this.highscores.UseVisualStyleBackColor = true;
@@ -67,10 +67,10 @@
             // 
             // over
             // 
-            this.over.Location = new System.Drawing.Point(170, 119);
-            this.over.Margin = new System.Windows.Forms.Padding(2);
+            this.over.Location = new System.Drawing.Point(227, 146);
+            this.over.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.over.Name = "over";
-            this.over.Size = new System.Drawing.Size(120, 37);
+            this.over.Size = new System.Drawing.Size(160, 46);
             this.over.TabIndex = 3;
             this.over.Text = "Over";
             this.over.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             // 
             // quit
             // 
-            this.quit.Location = new System.Drawing.Point(397, 309);
-            this.quit.Margin = new System.Windows.Forms.Padding(2);
+            this.quit.Location = new System.Drawing.Point(529, 380);
+            this.quit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quit.Name = "quit";
-            this.quit.Size = new System.Drawing.Size(56, 38);
+            this.quit.Size = new System.Drawing.Size(75, 47);
             this.quit.TabIndex = 4;
             this.quit.Text = "Game verlaten";
             this.quit.UseVisualStyleBackColor = true;
@@ -91,9 +91,10 @@
             // 
             this.muteUnmute.Appearance = System.Windows.Forms.Appearance.Button;
             this.muteUnmute.AutoSize = true;
-            this.muteUnmute.Location = new System.Drawing.Point(12, 328);
+            this.muteUnmute.Location = new System.Drawing.Point(16, 404);
+            this.muteUnmute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.muteUnmute.Name = "muteUnmute";
-            this.muteUnmute.Size = new System.Drawing.Size(71, 23);
+            this.muteUnmute.Size = new System.Drawing.Size(89, 27);
             this.muteUnmute.TabIndex = 5;
             this.muteUnmute.Text = "Mute Audio";
             this.muteUnmute.UseVisualStyleBackColor = true;
@@ -101,10 +102,10 @@
             // 
             // starwars
             // 
-            this.starwars.Location = new System.Drawing.Point(169, 210);
-            this.starwars.Margin = new System.Windows.Forms.Padding(2);
+            this.starwars.Location = new System.Drawing.Point(225, 258);
+            this.starwars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.starwars.Name = "starwars";
-            this.starwars.Size = new System.Drawing.Size(68, 37);
+            this.starwars.Size = new System.Drawing.Size(91, 46);
             this.starwars.TabIndex = 30;
             this.starwars.Text = "STAR WARS";
             this.starwars.UseVisualStyleBackColor = true;
@@ -112,10 +113,10 @@
             // 
             // auto
             // 
-            this.auto.Location = new System.Drawing.Point(313, 210);
-            this.auto.Margin = new System.Windows.Forms.Padding(2);
+            this.auto.Location = new System.Drawing.Point(417, 258);
+            this.auto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.auto.Name = "auto";
-            this.auto.Size = new System.Drawing.Size(68, 37);
+            this.auto.Size = new System.Drawing.Size(91, 46);
             this.auto.TabIndex = 29;
             this.auto.Text = "AUTO\'S";
             this.auto.UseVisualStyleBackColor = true;
@@ -123,10 +124,10 @@
             // 
             // Standaard
             // 
-            this.Standaard.Location = new System.Drawing.Point(76, 210);
-            this.Standaard.Margin = new System.Windows.Forms.Padding(2);
+            this.Standaard.Location = new System.Drawing.Point(101, 258);
+            this.Standaard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Standaard.Name = "Standaard";
-            this.Standaard.Size = new System.Drawing.Size(88, 37);
+            this.Standaard.Size = new System.Drawing.Size(117, 46);
             this.Standaard.TabIndex = 28;
             this.Standaard.Text = "STANDAARD";
             this.Standaard.UseVisualStyleBackColor = true;
@@ -134,10 +135,10 @@
             // 
             // frozen
             // 
-            this.frozen.Location = new System.Drawing.Point(241, 210);
-            this.frozen.Margin = new System.Windows.Forms.Padding(2);
+            this.frozen.Location = new System.Drawing.Point(321, 258);
+            this.frozen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.frozen.Name = "frozen";
-            this.frozen.Size = new System.Drawing.Size(68, 37);
+            this.frozen.Size = new System.Drawing.Size(91, 46);
             this.frozen.TabIndex = 27;
             this.frozen.Text = "FROZEN";
             this.frozen.UseVisualStyleBackColor = true;
@@ -147,10 +148,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(73, 185);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(97, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(62, 17);
             this.label1.TabIndex = 31;
             this.label1.Text = "Thema\'s";
             // 
@@ -158,10 +158,11 @@
             // 
             this.trackBar1.AutoSize = false;
             this.trackBar1.BackColor = System.Drawing.SystemColors.Window;
-            this.trackBar1.Location = new System.Drawing.Point(102, 334);
+            this.trackBar1.Location = new System.Drawing.Point(136, 411);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(126, 20);
+            this.trackBar1.Size = new System.Drawing.Size(168, 25);
             this.trackBar1.TabIndex = 32;
             this.trackBar1.Value = 50;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
@@ -170,17 +171,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(128, 318);
+            this.label2.Location = new System.Drawing.Point(171, 391);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 33;
             this.label2.Text = "Master volume";
             // 
             // hoofdmenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 357);
+            this.ClientSize = new System.Drawing.Size(616, 439);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.label1);
@@ -193,7 +195,7 @@
             this.Controls.Add(this.over);
             this.Controls.Add(this.highscores);
             this.Controls.Add(this.play);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "hoofdmenu";
             this.Text = "Memory - menu";
